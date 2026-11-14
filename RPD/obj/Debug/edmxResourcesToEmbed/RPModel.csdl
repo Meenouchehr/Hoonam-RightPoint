@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RightPointModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RightPointEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBL_ACC" EntityType="RightPointModel.TBL_ACC" />
+    <EntitySet Name="TBL_Addresses" EntityType="RightPointModel.TBL_Addresses" />
+    <EntitySet Name="TBL_Agent" EntityType="RightPointModel.TBL_Agent" />
+    <EntitySet Name="TBL_AMD" EntityType="RightPointModel.TBL_AMD" />
+    <EntitySet Name="TBL_Answer" EntityType="RightPointModel.TBL_Answer" />
+    <EntitySet Name="TBL_Category" EntityType="RightPointModel.TBL_Category" />
+    <EntitySet Name="TBL_Channel" EntityType="RightPointModel.TBL_Channel" />
+    <EntitySet Name="TBL_Class" EntityType="RightPointModel.TBL_Class" />
+    <EntitySet Name="TBL_Contract" EntityType="RightPointModel.TBL_Contract" />
+    <EntitySet Name="TBL_ContractAccess" EntityType="RightPointModel.TBL_ContractAccess" />
+    <EntitySet Name="TBL_Corporation" EntityType="RightPointModel.TBL_Corporation" />
+    <EntitySet Name="TBL_Descriptive" EntityType="RightPointModel.TBL_Descriptive" />
+    <EntitySet Name="TBL_Emails" EntityType="RightPointModel.TBL_Emails" />
+    <EntitySet Name="TBL_LCategory" EntityType="RightPointModel.TBL_LCategory" />
+    <EntitySet Name="TBL_Limit" EntityType="RightPointModel.TBL_Limit" />
+    <EntitySet Name="TBL_Lottary" EntityType="RightPointModel.TBL_Lottary" />
+    <EntitySet Name="TBL_Names" EntityType="RightPointModel.TBL_Names" />
+    <EntitySet Name="TBL_Optional" EntityType="RightPointModel.TBL_Optional" />
+    <EntitySet Name="TBL_OwnerGroup" EntityType="RightPointModel.TBL_OwnerGroup" />
+    <EntitySet Name="TBL_Position" EntityType="RightPointModel.TBL_Position" />
+    <EntitySet Name="TBL_Profile" EntityType="RightPointModel.TBL_Profile" />
+    <EntitySet Name="TBL_Program" EntityType="RightPointModel.TBL_Program" />
+    <EntitySet Name="TBL_QEOptional" EntityType="RightPointModel.TBL_QEOptional" />
+    <EntitySet Name="TBL_QExtra" EntityType="RightPointModel.TBL_QExtra" />
+    <EntitySet Name="TBL_QPOptional" EntityType="RightPointModel.TBL_QPOptional" />
+    <EntitySet Name="TBL_QProgram" EntityType="RightPointModel.TBL_QProgram" />
+    <EntitySet Name="TBL_Question" EntityType="RightPointModel.TBL_Question" />
+    <EntitySet Name="TBL_Questionnaire" EntityType="RightPointModel.TBL_Questionnaire" />
+    <EntitySet Name="TBL_RC" EntityType="RightPointModel.TBL_RC" />
+    <EntitySet Name="TBL_Respondent" EntityType="RightPointModel.TBL_Respondent" />
+    <EntitySet Name="TBL_Responder" EntityType="RightPointModel.TBL_Responder" />
+    <EntitySet Name="TBL_Tels" EntityType="RightPointModel.TBL_Tels" />
+    <EntitySet Name="TBL_Titles" EntityType="RightPointModel.TBL_Titles" />
+    <EntitySet Name="TBL_User" EntityType="RightPointModel.TBL_User" />
+    <EntitySet Name="TBL_WeekRep" EntityType="RightPointModel.TBL_WeekRep" />
+    <EntitySet Name="VIW_Lottaries" EntityType="RightPointModel.VIW_Lottaries" />
+    <EntitySet Name="VIW_Profiles" EntityType="RightPointModel.VIW_Profiles" />
+    <EntitySet Name="VIW_Programs" EntityType="RightPointModel.VIW_Programs" />
+    <AssociationSet Name="FK_TBL_ADDR_REFERENCE_TBL_RC" Association="RightPointModel.FK_TBL_ADDR_REFERENCE_TBL_RC">
+      <End Role="TBL_RC" EntitySet="TBL_RC" />
+      <End Role="TBL_Addresses" EntitySet="TBL_Addresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_AGEN_REFERENCE_TBL_CORP" Association="RightPointModel.FK_TBL_AGEN_REFERENCE_TBL_CORP">
+      <End Role="TBL_Corporation" EntitySet="TBL_Corporation" />
+      <End Role="TBL_Agent" EntitySet="TBL_Agent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_AGEN_REFERENCE_TBL_PROF" Association="RightPointModel.FK_TBL_AGEN_REFERENCE_TBL_PROF">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_Agent" EntitySet="TBL_Agent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ANSW_REFERENCE_TBL_QUES" Association="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_QUES">
+      <End Role="TBL_Question" EntitySet="TBL_Question" />
+      <End Role="TBL_Answer" EntitySet="TBL_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ANSW_REFERENCE_TBL_RESP" Association="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_RESP">
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+      <End Role="TBL_Answer" EntitySet="TBL_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_DESC_REFERENCE_TBL_ANSW" Association="RightPointModel.FK_TBL_DESC_REFERENCE_TBL_ANSW">
+      <End Role="TBL_Answer" EntitySet="TBL_Answer" />
+      <End Role="TBL_Descriptive" EntitySet="TBL_Descriptive" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_OPTI_REFERENCE_TBL_ANSW" Association="RightPointModel.FK_TBL_OPTI_REFERENCE_TBL_ANSW">
+      <End Role="TBL_Answer" EntitySet="TBL_Answer" />
+      <End Role="TBL_Optional" EntitySet="TBL_Optional" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_QUES_REFERENCE_TBL_CATE" Association="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_CATE">
+      <End Role="TBL_Category" EntitySet="TBL_Category" />
+      <End Role="TBL_Question" EntitySet="TBL_Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_PROG_REFERENCE_TBL_CHAN" Association="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CHAN">
+      <End Role="TBL_Channel" EntitySet="TBL_Channel" />
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CONT_REFERENCE_TBL_CLAS" Association="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CLAS">
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+      <End Role="TBL_ContractAccess" EntitySet="TBL_ContractAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_PROG_REFERENCE_TBL_CLAS" Association="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CLAS">
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CONT_REFERENCE_TBL_CONT" Association="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CONT">
+      <End Role="TBL_Contract" EntitySet="TBL_Contract" />
+      <End Role="TBL_ContractAccess" EntitySet="TBL_ContractAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_EMAI_REFERENCE_TBL_RC" Association="RightPointModel.FK_TBL_EMAI_REFERENCE_TBL_RC">
+      <End Role="TBL_RC" EntitySet="TBL_RC" />
+      <End Role="TBL_Emails" EntitySet="TBL_Emails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_LOTT_REFERENCE_TBL_LCAT" Association="RightPointModel.FK_TBL_LOTT_REFERENCE_TBL_LCAT">
+      <End Role="TBL_LCategory" EntitySet="TBL_LCategory" />
+      <End Role="TBL_Lottary" EntitySet="TBL_Lottary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_LIMI_REFERENCE_TBL_PROG" Association="RightPointModel.FK_TBL_LIMI_REFERENCE_TBL_PROG">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_Limit" EntitySet="TBL_Limit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_NAME_REFERENCE_TBL_PROF" Association="RightPointModel.FK_TBL_NAME_REFERENCE_TBL_PROF">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_Names" EntitySet="TBL_Names" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_RESP_REFERENCE_TBL_PROF" Association="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_RESP_REFERENCE_TBL_PROF2" Association="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF2">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_Responder" EntitySet="TBL_Responder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_RESP_REFERENCE_TBL_PROF3" Association="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF3">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TITL_REFERENCE_TBL_PROF" Association="RightPointModel.FK_TBL_TITL_REFERENCE_TBL_PROF">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_Titles" EntitySet="TBL_Titles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_REFERENCE_TBL_PROF" Association="RightPointModel.FK_TBL_USER_REFERENCE_TBL_PROF">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_User" EntitySet="TBL_User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_WEEK_REFERENCE_TBL_PROG" Association="RightPointModel.FK_TBL_WEEK_REFERENCE_TBL_PROG">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_WeekRep" EntitySet="TBL_WeekRep" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_QEOP_REFERENCE_TBL_QEXT" Association="RightPointModel.FK_TBL_QEOP_REFERENCE_TBL_QEXT">
+      <End Role="TBL_QExtra" EntitySet="TBL_QExtra" />
+      <End Role="TBL_QEOptional" EntitySet="TBL_QEOptional" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_QEXT_REFERENCE_TBL_QUES" Association="RightPointModel.FK_TBL_QEXT_REFERENCE_TBL_QUES">
+      <End Role="TBL_Question" EntitySet="TBL_Question" />
+      <End Role="TBL_QExtra" EntitySet="TBL_QExtra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_QPOP_REFERENCE_TBL_QPRO" Association="RightPointModel.FK_TBL_QPOP_REFERENCE_TBL_QPRO">
+      <End Role="TBL_QProgram" EntitySet="TBL_QProgram" />
+      <End Role="TBL_QPOptional" EntitySet="TBL_QPOptional" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_QPRO_REFERENCE_TBL_QUES" Association="RightPointModel.FK_TBL_QPRO_REFERENCE_TBL_QUES">
+      <End Role="TBL_Question" EntitySet="TBL_Question" />
+      <End Role="TBL_QProgram" EntitySet="TBL_QProgram" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_QUES_REFERENCE_TBL_QUES" Association="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_QUES">
+      <End Role="TBL_Questionnaire" EntitySet="TBL_Questionnaire" />
+      <End Role="TBL_Question" EntitySet="TBL_Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_RESP_REFERENCE_TBL_QUES" Association="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_QUES">
+      <End Role="TBL_Questionnaire" EntitySet="TBL_Questionnaire" />
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_RC_REFERENCE_TBL_RESP" Association="RightPointModel.FK_TBL_RC_REFERENCE_TBL_RESP">
+      <End Role="TBL_Responder" EntitySet="TBL_Responder" />
+      <End Role="TBL_RC" EntitySet="TBL_RC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TELS_REFERENCE_TBL_RC" Association="RightPointModel.FK_TBL_TELS_REFERENCE_TBL_RC">
+      <End Role="TBL_RC" EntitySet="TBL_RC" />
+      <End Role="TBL_Tels" EntitySet="TBL_Tels" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TBL_ACC">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Coefficient" Type="Double" />
+  </EntityType>
+  <EntityType Name="TBL_Addresses">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_RC" Relationship="RightPointModel.FK_TBL_ADDR_REFERENCE_TBL_RC" FromRole="TBL_Addresses" ToRole="TBL_RC" />
+  </EntityType>
+  <EntityType Name="TBL_Agent">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_" Type="Int64" />
+    <Property Name="FLD_Corporation_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Corporation" Relationship="RightPointModel.FK_TBL_AGEN_REFERENCE_TBL_CORP" FromRole="TBL_Agent" ToRole="TBL_Corporation" />
+    <NavigationProperty Name="TBL_Profile" Relationship="RightPointModel.FK_TBL_AGEN_REFERENCE_TBL_PROF" FromRole="TBL_Agent" ToRole="TBL_Profile" />
+  </EntityType>
+  <EntityType Name="TBL_AMD">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Month" Type="Byte" />
+    <Property Name="FLD_Year" Type="Byte" />
+    <Property Name="FLD_Percent" Type="Byte" />
+  </EntityType>
+  <EntityType Name="TBL_Answer">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Respondent_FK" Type="Int64" />
+    <Property Name="FLD_Question_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Question" Relationship="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_QUES" FromRole="TBL_Answer" ToRole="TBL_Question" />
+    <NavigationProperty Name="TBL_Respondent" Relationship="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_RESP" FromRole="TBL_Answer" ToRole="TBL_Respondent" />
+    <NavigationProperty Name="TBL_Descriptive" Relationship="RightPointModel.FK_TBL_DESC_REFERENCE_TBL_ANSW" FromRole="TBL_Answer" ToRole="TBL_Descriptive" />
+    <NavigationProperty Name="TBL_Optional" Relationship="RightPointModel.FK_TBL_OPTI_REFERENCE_TBL_ANSW" FromRole="TBL_Answer" ToRole="TBL_Optional" />
+  </EntityType>
+  <EntityType Name="TBL_Category">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Tab" Type="Byte" />
+    <NavigationProperty Name="TBL_Question" Relationship="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_CATE" FromRole="TBL_Category" ToRole="TBL_Question" />
+  </EntityType>
+  <EntityType Name="TBL_Channel">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Media" Type="Byte" />
+    <Property Name="FLD_Broadcast" Type="Byte" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CHAN" FromRole="TBL_Channel" ToRole="TBL_Program" />
+  </EntityType>
+  <EntityType Name="TBL_Class">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_ClassNo" Type="Int32" />
+    <Property Name="FLD_PPS" Type="Double" />
+    <NavigationProperty Name="TBL_ContractAccess" Relationship="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CLAS" FromRole="TBL_Class" ToRole="TBL_ContractAccess" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CLAS" FromRole="TBL_Class" ToRole="TBL_Program" />
+  </EntityType>
+  <EntityType Name="TBL_Contract">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Commnet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_ContractAccess" Relationship="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CONT" FromRole="TBL_Contract" ToRole="TBL_ContractAccess" />
+  </EntityType>
+  <EntityType Name="TBL_ContractAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_ContractID_FK" Type="Int64" />
+    <Property Name="FLD_ClassID_FK" Type="Int64" />
+    <Property Name="FLD_Access" Type="Boolean" />
+    <NavigationProperty Name="TBL_Class" Relationship="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CLAS" FromRole="TBL_ContractAccess" ToRole="TBL_Class" />
+    <NavigationProperty Name="TBL_Contract" Relationship="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CONT" FromRole="TBL_ContractAccess" ToRole="TBL_Contract" />
+  </EntityType>
+  <EntityType Name="TBL_Corporation">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Agent" Relationship="RightPointModel.FK_TBL_AGEN_REFERENCE_TBL_CORP" FromRole="TBL_Corporation" ToRole="TBL_Agent" />
+  </EntityType>
+  <EntityType Name="TBL_Descriptive">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Descrip" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Answer" Relationship="RightPointModel.FK_TBL_DESC_REFERENCE_TBL_ANSW" FromRole="TBL_Descriptive" ToRole="TBL_Answer" />
+  </EntityType>
+  <EntityType Name="TBL_Emails">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_RC" Relationship="RightPointModel.FK_TBL_EMAI_REFERENCE_TBL_RC" FromRole="TBL_Emails" ToRole="TBL_RC" />
+  </EntityType>
+  <EntityType Name="TBL_LCategory">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Lottary" Relationship="RightPointModel.FK_TBL_LOTT_REFERENCE_TBL_LCAT" FromRole="TBL_LCategory" ToRole="TBL_Lottary" />
+  </EntityType>
+  <EntityType Name="TBL_Limit">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Date" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Day" Type="Byte" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_LIMI_REFERENCE_TBL_PROG" FromRole="TBL_Limit" ToRole="TBL_Program" />
+  </EntityType>
+  <EntityType Name="TBL_Lottary">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Category_FK" Type="Int64" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Percent" Type="Double" />
+    <NavigationProperty Name="TBL_LCategory" Relationship="RightPointModel.FK_TBL_LOTT_REFERENCE_TBL_LCAT" FromRole="TBL_Lottary" ToRole="TBL_LCategory" />
+  </EntityType>
+  <EntityType Name="TBL_Names">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_ForeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Surname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Gender" Type="Boolean" />
+    <NavigationProperty Name="TBL_Profile" Relationship="RightPointModel.FK_TBL_NAME_REFERENCE_TBL_PROF" FromRole="TBL_Names" ToRole="TBL_Profile" />
+  </EntityType>
+  <EntityType Name="TBL_Optional">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Option" Type="Byte" />
+    <NavigationProperty Name="TBL_Answer" Relationship="RightPointModel.FK_TBL_OPTI_REFERENCE_TBL_ANSW" FromRole="TBL_Optional" ToRole="TBL_Answer" />
+  </EntityType>
+  <EntityType Name="TBL_OwnerGroup">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Commnet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBL_Position">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Percent" Type="Double" />
+  </EntityType>
+  <EntityType Name="TBL_Profile">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Access" Type="Byte" />
+    <NavigationProperty Name="TBL_Agent" Relationship="RightPointModel.FK_TBL_AGEN_REFERENCE_TBL_PROF" FromRole="TBL_Profile" ToRole="TBL_Agent" />
+    <NavigationProperty Name="TBL_Names" Relationship="RightPointModel.FK_TBL_NAME_REFERENCE_TBL_PROF" FromRole="TBL_Profile" ToRole="TBL_Names" />
+    <NavigationProperty Name="TBL_Respondent" Relationship="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF" FromRole="TBL_Profile" ToRole="TBL_Respondent" />
+    <NavigationProperty Name="TBL_Responder" Relationship="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF2" FromRole="TBL_Profile" ToRole="TBL_Responder" />
+    <NavigationProperty Name="TBL_Respondent1" Relationship="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF3" FromRole="TBL_Profile" ToRole="TBL_Respondent" />
+    <NavigationProperty Name="TBL_Titles" Relationship="RightPointModel.FK_TBL_TITL_REFERENCE_TBL_PROF" FromRole="TBL_Profile" ToRole="TBL_Titles" />
+    <NavigationProperty Name="TBL_User" Relationship="RightPointModel.FK_TBL_USER_REFERENCE_TBL_PROF" FromRole="TBL_Profile" ToRole="TBL_User" />
+  </EntityType>
+  <EntityType Name="TBL_Program">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Class_FK" Type="Int64" />
+    <Property Name="FLD_Channel_FK" Type="Int64" />
+    <Property Name="FLD_StartTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_EndTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Enable" Type="Boolean" />
+    <Property Name="FLD_Before" Type="Boolean" />
+    <Property Name="FLD_Middle" Type="Boolean" />
+    <Property Name="FLD_After" Type="Boolean" />
+    <NavigationProperty Name="TBL_Channel" Relationship="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CHAN" FromRole="TBL_Program" ToRole="TBL_Channel" />
+    <NavigationProperty Name="TBL_Class" Relationship="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CLAS" FromRole="TBL_Program" ToRole="TBL_Class" />
+    <NavigationProperty Name="TBL_Limit" Relationship="RightPointModel.FK_TBL_LIMI_REFERENCE_TBL_PROG" FromRole="TBL_Program" ToRole="TBL_Limit" />
+    <NavigationProperty Name="TBL_WeekRep" Relationship="RightPointModel.FK_TBL_WEEK_REFERENCE_TBL_PROG" FromRole="TBL_Program" ToRole="TBL_WeekRep" />
+  </EntityType>
+  <EntityType Name="TBL_QEOptional">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_QExtra_FK" Type="Int64" />
+    <Property Name="FLD_Option" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Choice" Type="Byte" />
+    <NavigationProperty Name="TBL_QExtra" Relationship="RightPointModel.FK_TBL_QEOP_REFERENCE_TBL_QEXT" FromRole="TBL_QEOptional" ToRole="TBL_QExtra" />
+  </EntityType>
+  <EntityType Name="TBL_QExtra">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Question" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Optional" Type="Boolean" />
+    <NavigationProperty Name="TBL_QEOptional" Relationship="RightPointModel.FK_TBL_QEOP_REFERENCE_TBL_QEXT" FromRole="TBL_QExtra" ToRole="TBL_QEOptional" />
+    <NavigationProperty Name="TBL_Question" Relationship="RightPointModel.FK_TBL_QEXT_REFERENCE_TBL_QUES" FromRole="TBL_QExtra" ToRole="TBL_Question" />
+  </EntityType>
+  <EntityType Name="TBL_QPOptional">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_QProgram_FK" Type="Int64" />
+    <Property Name="FLD_Option" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Choice" Type="Byte" />
+    <NavigationProperty Name="TBL_QProgram" Relationship="RightPointModel.FK_TBL_QPOP_REFERENCE_TBL_QPRO" FromRole="TBL_QPOptional" ToRole="TBL_QProgram" />
+  </EntityType>
+  <EntityType Name="TBL_QProgram">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <Property Name="FLD_Optional" Type="Boolean" />
+    <NavigationProperty Name="TBL_QPOptional" Relationship="RightPointModel.FK_TBL_QPOP_REFERENCE_TBL_QPRO" FromRole="TBL_QProgram" ToRole="TBL_QPOptional" />
+    <NavigationProperty Name="TBL_Question" Relationship="RightPointModel.FK_TBL_QPRO_REFERENCE_TBL_QUES" FromRole="TBL_QProgram" ToRole="TBL_Question" />
+  </EntityType>
+  <EntityType Name="TBL_Question">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Category_FK" Type="Int64" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+    <Property Name="FLD_Tab" Type="Int64" />
+    <NavigationProperty Name="TBL_Answer" Relationship="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_QUES" FromRole="TBL_Question" ToRole="TBL_Answer" />
+    <NavigationProperty Name="TBL_Category" Relationship="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_CATE" FromRole="TBL_Question" ToRole="TBL_Category" />
+    <NavigationProperty Name="TBL_QExtra" Relationship="RightPointModel.FK_TBL_QEXT_REFERENCE_TBL_QUES" FromRole="TBL_Question" ToRole="TBL_QExtra" />
+    <NavigationProperty Name="TBL_QProgram" Relationship="RightPointModel.FK_TBL_QPRO_REFERENCE_TBL_QUES" FromRole="TBL_Question" ToRole="TBL_QProgram" />
+    <NavigationProperty Name="TBL_Questionnaire" Relationship="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_QUES" FromRole="TBL_Question" ToRole="TBL_Questionnaire" />
+  </EntityType>
+  <EntityType Name="TBL_Questionnaire">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_QNo" Type="Int64" />
+    <NavigationProperty Name="TBL_Question" Relationship="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_QUES" FromRole="TBL_Questionnaire" ToRole="TBL_Question" />
+    <NavigationProperty Name="TBL_Respondent" Relationship="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_QUES" FromRole="TBL_Questionnaire" ToRole="TBL_Respondent" />
+  </EntityType>
+  <EntityType Name="TBL_RC">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_CAccess" Type="Byte" />
+    <NavigationProperty Name="TBL_Addresses" Relationship="RightPointModel.FK_TBL_ADDR_REFERENCE_TBL_RC" FromRole="TBL_RC" ToRole="TBL_Addresses" />
+    <NavigationProperty Name="TBL_Emails" Relationship="RightPointModel.FK_TBL_EMAI_REFERENCE_TBL_RC" FromRole="TBL_RC" ToRole="TBL_Emails" />
+    <NavigationProperty Name="TBL_Responder" Relationship="RightPointModel.FK_TBL_RC_REFERENCE_TBL_RESP" FromRole="TBL_RC" ToRole="TBL_Responder" />
+    <NavigationProperty Name="TBL_Tels" Relationship="RightPointModel.FK_TBL_TELS_REFERENCE_TBL_RC" FromRole="TBL_RC" ToRole="TBL_Tels" />
+  </EntityType>
+  <EntityType Name="TBL_Respondent">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+    <Property Name="FLD_Responder_FK" Type="Int64" />
+    <Property Name="FLD_inquirer_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Answer" Relationship="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_RESP" FromRole="TBL_Respondent" ToRole="TBL_Answer" />
+    <NavigationProperty Name="TBL_Profile" Relationship="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF" FromRole="TBL_Respondent" ToRole="TBL_Profile" />
+    <NavigationProperty Name="TBL_Profile1" Relationship="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF3" FromRole="TBL_Respondent" ToRole="TBL_Profile" />
+    <NavigationProperty Name="TBL_Questionnaire" Relationship="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_QUES" FromRole="TBL_Respondent" ToRole="TBL_Questionnaire" />
+  </EntityType>
+  <EntityType Name="TBL_Responder">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Education" Type="Byte" />
+    <Property Name="FLD_Ages" Type="Byte" />
+    <Property Name="FLD_Occupation" Type="Byte" />
+    <Property Name="FLD_FamilyIncome" Type="Byte" />
+    <Property Name="FLD_Cooperation" Type="Boolean" />
+    <NavigationProperty Name="TBL_Profile" Relationship="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF2" FromRole="TBL_Responder" ToRole="TBL_Profile" />
+    <NavigationProperty Name="TBL_RC" Relationship="RightPointModel.FK_TBL_RC_REFERENCE_TBL_RESP" FromRole="TBL_Responder" ToRole="TBL_RC" />
+  </EntityType>
+  <EntityType Name="TBL_Tels">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Tel" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_RC" Relationship="RightPointModel.FK_TBL_TELS_REFERENCE_TBL_RC" FromRole="TBL_Tels" ToRole="TBL_RC" />
+  </EntityType>
+  <EntityType Name="TBL_Titles">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Profile" Relationship="RightPointModel.FK_TBL_TITL_REFERENCE_TBL_PROF" FromRole="TBL_Titles" ToRole="TBL_Profile" />
+  </EntityType>
+  <EntityType Name="TBL_User">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Profile" Relationship="RightPointModel.FK_TBL_USER_REFERENCE_TBL_PROF" FromRole="TBL_User" ToRole="TBL_Profile" />
+  </EntityType>
+  <EntityType Name="TBL_WeekRep">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Day" Type="Byte" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_WEEK_REFERENCE_TBL_PROG" FromRole="TBL_WeekRep" ToRole="TBL_Program" />
+  </EntityType>
+  <EntityType Name="VIW_Lottaries">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Category_FK" Type="Int64" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Percent" Type="Double" />
+    <Property Name="FLD_Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIW_Profiles">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Access" Type="Byte" />
+    <Property Name="FLD_ForeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Surname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Gender" Type="Boolean" />
+    <Property Name="FLD_Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Education" Type="Byte" />
+    <Property Name="FLD_Ages" Type="Byte" />
+    <Property Name="FLD_Occupation" Type="Byte" />
+    <Property Name="FLD_FamilyIncome" Type="Byte" />
+    <Property Name="FLD_Cooperation" Type="Boolean" />
+    <Property Name="FLD_CAccess" Type="Byte" />
+    <Property Name="FLD_ResponderAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ResponderTel" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ResponderEmail" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIW_Programs">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Class_FK" Type="Int64" />
+    <Property Name="FLD_Channel_FK" Type="Int64" />
+    <Property Name="FLD_StartTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_EndTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Enable" Type="Boolean" />
+    <Property Name="FLD_Before" Type="Boolean" />
+    <Property Name="FLD_Middle" Type="Boolean" />
+    <Property Name="FLD_After" Type="Boolean" />
+    <Property Name="FLD_Channel" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Media" Type="Byte" />
+    <Property Name="FLD_Broadcast" Type="Byte" />
+    <Property Name="FLD_ClassNo" Type="Int32" />
+    <Property Name="FLD_PPS" Type="Double" />
+  </EntityType>
+  <Association Name="FK_TBL_ADDR_REFERENCE_TBL_RC">
+    <End Type="RightPointModel.TBL_RC" Role="TBL_RC" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Addresses" Role="TBL_Addresses" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_RC">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Addresses">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_AGEN_REFERENCE_TBL_CORP">
+    <End Type="RightPointModel.TBL_Corporation" Role="TBL_Corporation" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Agent" Role="TBL_Agent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Corporation">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Agent">
+        <PropertyRef Name="FLD_Corporation_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_AGEN_REFERENCE_TBL_PROF">
+    <End Type="RightPointModel.TBL_Profile" Role="TBL_Profile" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Agent" Role="TBL_Agent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Agent">
+        <PropertyRef Name="FLD_" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ANSW_REFERENCE_TBL_QUES">
+    <End Type="RightPointModel.TBL_Question" Role="TBL_Question" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Answer" Role="TBL_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Question">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Answer">
+        <PropertyRef Name="FLD_Question_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ANSW_REFERENCE_TBL_RESP">
+    <End Type="RightPointModel.TBL_Respondent" Role="TBL_Respondent" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Answer" Role="TBL_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Respondent">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Answer">
+        <PropertyRef Name="FLD_Respondent_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_DESC_REFERENCE_TBL_ANSW">
+    <End Type="RightPointModel.TBL_Answer" Role="TBL_Answer" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Descriptive" Role="TBL_Descriptive" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Answer">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Descriptive">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_OPTI_REFERENCE_TBL_ANSW">
+    <End Type="RightPointModel.TBL_Answer" Role="TBL_Answer" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Optional" Role="TBL_Optional" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Answer">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Optional">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_QUES_REFERENCE_TBL_CATE">
+    <End Type="RightPointModel.TBL_Category" Role="TBL_Category" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Question" Role="TBL_Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Category">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Question">
+        <PropertyRef Name="FLD_Category_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_PROG_REFERENCE_TBL_CHAN">
+    <End Type="RightPointModel.TBL_Channel" Role="TBL_Channel" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Channel">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Program">
+        <PropertyRef Name="FLD_Channel_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CONT_REFERENCE_TBL_CLAS">
+    <End Type="RightPointModel.TBL_Class" Role="TBL_Class" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ContractAccess" Role="TBL_ContractAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Class">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ContractAccess">
+        <PropertyRef Name="FLD_ClassID_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_PROG_REFERENCE_TBL_CLAS">
+    <End Type="RightPointModel.TBL_Class" Role="TBL_Class" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Class">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Program">
+        <PropertyRef Name="FLD_Class_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CONT_REFERENCE_TBL_CONT">
+    <End Type="RightPointModel.TBL_Contract" Role="TBL_Contract" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ContractAccess" Role="TBL_ContractAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Contract">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ContractAccess">
+        <PropertyRef Name="FLD_ContractID_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_EMAI_REFERENCE_TBL_RC">
+    <End Type="RightPointModel.TBL_RC" Role="TBL_RC" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Emails" Role="TBL_Emails" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_RC">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Emails">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_LOTT_REFERENCE_TBL_LCAT">
+    <End Type="RightPointModel.TBL_LCategory" Role="TBL_LCategory" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Lottary" Role="TBL_Lottary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_LCategory">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Lottary">
+        <PropertyRef Name="FLD_Category_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_LIMI_REFERENCE_TBL_PROG">
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Limit" Role="TBL_Limit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Limit">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_NAME_REFERENCE_TBL_PROF">
+    <End Type="RightPointModel.TBL_Profile" Role="TBL_Profile" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Names" Role="TBL_Names" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Names">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_RESP_REFERENCE_TBL_PROF">
+    <End Type="RightPointModel.TBL_Profile" Role="TBL_Profile" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Respondent" Role="TBL_Respondent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Respondent">
+        <PropertyRef Name="FLD_Responder_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_RESP_REFERENCE_TBL_PROF2">
+    <End Type="RightPointModel.TBL_Profile" Role="TBL_Profile" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Responder" Role="TBL_Responder" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Responder">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_RESP_REFERENCE_TBL_PROF3">
+    <End Type="RightPointModel.TBL_Profile" Role="TBL_Profile" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Respondent" Role="TBL_Respondent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Respondent">
+        <PropertyRef Name="FLD_inquirer_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TITL_REFERENCE_TBL_PROF">
+    <End Type="RightPointModel.TBL_Profile" Role="TBL_Profile" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Titles" Role="TBL_Titles" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Titles">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_REFERENCE_TBL_PROF">
+    <End Type="RightPointModel.TBL_Profile" Role="TBL_Profile" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_User" Role="TBL_User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_User">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_WEEK_REFERENCE_TBL_PROG">
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_WeekRep" Role="TBL_WeekRep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_WeekRep">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_QEOP_REFERENCE_TBL_QEXT">
+    <End Type="RightPointModel.TBL_QExtra" Role="TBL_QExtra" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_QEOptional" Role="TBL_QEOptional" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_QExtra">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_QEOptional">
+        <PropertyRef Name="FLD_QExtra_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_QEXT_REFERENCE_TBL_QUES">
+    <End Type="RightPointModel.TBL_Question" Role="TBL_Question" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_QExtra" Role="TBL_QExtra" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Question">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_QExtra">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_QPOP_REFERENCE_TBL_QPRO">
+    <End Type="RightPointModel.TBL_QProgram" Role="TBL_QProgram" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_QPOptional" Role="TBL_QPOptional" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_QProgram">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_QPOptional">
+        <PropertyRef Name="FLD_QProgram_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_QPRO_REFERENCE_TBL_QUES">
+    <End Type="RightPointModel.TBL_Question" Role="TBL_Question" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_QProgram" Role="TBL_QProgram" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Question">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_QProgram">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_QUES_REFERENCE_TBL_QUES">
+    <End Type="RightPointModel.TBL_Questionnaire" Role="TBL_Questionnaire" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Question" Role="TBL_Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Questionnaire">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Question">
+        <PropertyRef Name="FLD_Questionnaire_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_RESP_REFERENCE_TBL_QUES">
+    <End Type="RightPointModel.TBL_Questionnaire" Role="TBL_Questionnaire" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Respondent" Role="TBL_Respondent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Questionnaire">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Respondent">
+        <PropertyRef Name="FLD_Questionnaire_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_RC_REFERENCE_TBL_RESP">
+    <End Type="RightPointModel.TBL_Responder" Role="TBL_Responder" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_RC" Role="TBL_RC" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Responder">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_RC">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TELS_REFERENCE_TBL_RC">
+    <End Type="RightPointModel.TBL_RC" Role="TBL_RC" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Tels" Role="TBL_Tels" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_RC">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Tels">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,1497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RightPointModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RightPointEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="PROC_CraeteAutorizeList" />
+    <EntitySet Name="TBL_ACC" EntityType="RightPointModel.TBL_ACC" />
+    <EntitySet Name="TBL_AMD" EntityType="RightPointModel.TBL_AMD" />
+    <EntitySet Name="TBL_Answer" EntityType="RightPointModel.TBL_Answer" />
+    <EntitySet Name="TBL_Campaign" EntityType="RightPointModel.TBL_Campaign" />
+    <EntitySet Name="TBL_CampaignAccess" EntityType="RightPointModel.TBL_CampaignAccess" />
+    <EntitySet Name="TBL_Category" EntityType="RightPointModel.TBL_Category" />
+    <EntitySet Name="TBL_Channel" EntityType="RightPointModel.TBL_Channel" />
+    <EntitySet Name="TBL_City" EntityType="RightPointModel.TBL_City" />
+    <EntitySet Name="TBL_Class" EntityType="RightPointModel.TBL_Class" />
+    <EntitySet Name="TBL_Company" EntityType="RightPointModel.TBL_Company" />
+    <EntitySet Name="TBL_ContextType" EntityType="RightPointModel.TBL_ContextType" />
+    <EntitySet Name="TBL_Contract" EntityType="RightPointModel.TBL_Contract" />
+    <EntitySet Name="TBL_ContractAccess" EntityType="RightPointModel.TBL_ContractAccess" />
+    <EntitySet Name="TBL_ContractMD" EntityType="RightPointModel.TBL_ContractMD" />
+    <EntitySet Name="TBL_Foretaste" EntityType="RightPointModel.TBL_Foretaste" />
+    <EntitySet Name="TBL_LCategory" EntityType="RightPointModel.TBL_LCategory" />
+    <EntitySet Name="TBL_Limit" EntityType="RightPointModel.TBL_Limit" />
+    <EntitySet Name="TBL_Location" EntityType="RightPointModel.TBL_Location" />
+    <EntitySet Name="TBL_Lottary" EntityType="RightPointModel.TBL_Lottary" />
+    <EntitySet Name="TBL_Media" EntityType="RightPointModel.TBL_Media" />
+    <EntitySet Name="TBL_OwnerGroup" EntityType="RightPointModel.TBL_OwnerGroup" />
+    <EntitySet Name="TBL_Position" EntityType="RightPointModel.TBL_Position" />
+    <EntitySet Name="TBL_Profile" EntityType="RightPointModel.TBL_Profile" />
+    <EntitySet Name="TBL_Program" EntityType="RightPointModel.TBL_Program" />
+    <EntitySet Name="TBL_ProgramAccess" EntityType="RightPointModel.TBL_ProgramAccess" />
+    <EntitySet Name="TBL_ProgramSeries" EntityType="RightPointModel.TBL_ProgramSeries" />
+    <EntitySet Name="TBL_Province" EntityType="RightPointModel.TBL_Province" />
+    <EntitySet Name="TBL_Question" EntityType="RightPointModel.TBL_Question" />
+    <EntitySet Name="TBL_Questionnaire" EntityType="RightPointModel.TBL_Questionnaire" />
+    <EntitySet Name="TBL_Respondent" EntityType="RightPointModel.TBL_Respondent" />
+    <EntitySet Name="TBL_Responder" EntityType="RightPointModel.TBL_Responder" />
+    <EntitySet Name="TBL_User" EntityType="RightPointModel.TBL_User" />
+    <EntitySet Name="TBL_WeekRep" EntityType="RightPointModel.TBL_WeekRep" />
+    <EntitySet Name="VIW_Answer" EntityType="RightPointModel.VIW_Answer" />
+    <EntitySet Name="VIW_AutorizeList" EntityType="RightPointModel.VIW_AutorizeList" />
+    <EntitySet Name="VIW_Campaign" EntityType="RightPointModel.VIW_Campaign" />
+    <EntitySet Name="VIW_CampaignAccess" EntityType="RightPointModel.VIW_CampaignAccess" />
+    <EntitySet Name="VIW_Company" EntityType="RightPointModel.VIW_Company" />
+    <EntitySet Name="VIW_ContractProgram" EntityType="RightPointModel.VIW_ContractProgram" />
+    <EntitySet Name="VIW_Contracts" EntityType="RightPointModel.VIW_Contracts" />
+    <EntitySet Name="VIW_Lottary" EntityType="RightPointModel.VIW_Lottary" />
+    <EntitySet Name="VIW_Profile" EntityType="RightPointModel.VIW_Profile" />
+    <EntitySet Name="VIW_Program" EntityType="RightPointModel.VIW_Program" />
+    <EntitySet Name="VIW_ProgramAccess" EntityType="RightPointModel.VIW_ProgramAccess" />
+    <EntitySet Name="VIW_Question" EntityType="RightPointModel.VIW_Question" />
+    <EntitySet Name="VIW_Respondent" EntityType="RightPointModel.VIW_Respondent" />
+    <EntitySet Name="VIW_User" EntityType="RightPointModel.VIW_User" />
+    <EntitySet Name="VIW_WeekReps" EntityType="RightPointModel.VIW_WeekReps" />
+    <AssociationSet Name="FK_TBL_ACC_TBL_Media" Association="RightPointModel.FK_TBL_ACC_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_ACC" EntitySet="TBL_ACC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ACC_TBL_Media1" Association="RightPointModel.FK_TBL_ACC_TBL_Media1">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_ACC" EntitySet="TBL_ACC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Campaign_TBL_ACC" Association="RightPointModel.FK_TBL_Campaign_TBL_ACC">
+      <End Role="TBL_ACC" EntitySet="TBL_ACC" />
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_AMD_TBL_Media" Association="RightPointModel.FK_TBL_AMD_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_AMD" EntitySet="TBL_AMD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ANSW_REFERENCE_TBL_RESP" Association="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_RESP">
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+      <End Role="TBL_Answer" EntitySet="TBL_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Answer_TBL_Program" Association="RightPointModel.FK_TBL_Answer_TBL_Program">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_Answer" EntitySet="TBL_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Campaign_TBL_Company" Association="RightPointModel.FK_TBL_Campaign_TBL_Company">
+      <End Role="TBL_Company" EntitySet="TBL_Company" />
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Campaign_TBL_Lottary" Association="RightPointModel.FK_TBL_Campaign_TBL_Lottary">
+      <End Role="TBL_Lottary" EntitySet="TBL_Lottary" />
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Campaign_TBL_Questionnaire" Association="RightPointModel.FK_TBL_Campaign_TBL_Questionnaire">
+      <End Role="TBL_Questionnaire" EntitySet="TBL_Questionnaire" />
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CampaignAccess_TBL_Campaign" Association="RightPointModel.FK_TBL_CampaignAccess_TBL_Campaign">
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+      <End Role="TBL_CampaignAccess" EntitySet="TBL_CampaignAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CampaignAccess_TBL_User" Association="RightPointModel.FK_TBL_CampaignAccess_TBL_User">
+      <End Role="TBL_User" EntitySet="TBL_User" />
+      <End Role="TBL_CampaignAccess" EntitySet="TBL_CampaignAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Channel_TBL_Media" Association="RightPointModel.FK_TBL_Channel_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Channel" EntitySet="TBL_Channel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Channel_TBL_Province" Association="RightPointModel.FK_TBL_Channel_TBL_Province">
+      <End Role="TBL_Province" EntitySet="TBL_Province" />
+      <End Role="TBL_Channel" EntitySet="TBL_Channel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_PROG_REFERENCE_TBL_CHAN" Association="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CHAN">
+      <End Role="TBL_Channel" EntitySet="TBL_Channel" />
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Responder_TBL_City" Association="RightPointModel.FK_TBL_Responder_TBL_City">
+      <End Role="TBL_City" EntitySet="TBL_City" />
+      <End Role="TBL_Responder" EntitySet="TBL_Responder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Class_TBL_Contract" Association="RightPointModel.FK_TBL_Class_TBL_Contract">
+      <End Role="TBL_Contract" EntitySet="TBL_Contract" />
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Class_TBL_Media" Association="RightPointModel.FK_TBL_Class_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CONT_REFERENCE_TBL_CLAS" Association="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CLAS">
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+      <End Role="TBL_ContractAccess" EntitySet="TBL_ContractAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_Class" Association="RightPointModel.FK_TBL_ProgramAccess_TBL_Class">
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Company_TBL_OwnerGroup" Association="RightPointModel.FK_TBL_Company_TBL_OwnerGroup">
+      <End Role="TBL_OwnerGroup" EntitySet="TBL_OwnerGroup" />
+      <End Role="TBL_Company" EntitySet="TBL_Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Company_TBL_Profile" Association="RightPointModel.FK_TBL_Company_TBL_Profile">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_Company" EntitySet="TBL_Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_User_TBL_Company" Association="RightPointModel.FK_TBL_User_TBL_Company">
+      <End Role="TBL_Company" EntitySet="TBL_Company" />
+      <End Role="TBL_User" EntitySet="TBL_User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CONT_REFERENCE_TBL_CONT" Association="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CONT">
+      <End Role="TBL_Contract" EntitySet="TBL_Contract" />
+      <End Role="TBL_ContractAccess" EntitySet="TBL_ContractAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ContractMD_TBL_Contract" Association="RightPointModel.FK_TBL_ContractMD_TBL_Contract">
+      <End Role="TBL_Contract" EntitySet="TBL_Contract" />
+      <End Role="TBL_ContractMD" EntitySet="TBL_ContractMD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_LOTT_REFERENCE_TBL_LCAT" Association="RightPointModel.FK_TBL_LOTT_REFERENCE_TBL_LCAT">
+      <End Role="TBL_LCategory" EntitySet="TBL_LCategory" />
+      <End Role="TBL_Lottary" EntitySet="TBL_Lottary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_LIMI_REFERENCE_TBL_PROG" Association="RightPointModel.FK_TBL_LIMI_REFERENCE_TBL_PROG">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_Limit" EntitySet="TBL_Limit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Location_TBL_Media" Association="RightPointModel.FK_TBL_Location_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Location" EntitySet="TBL_Location" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_Location" Association="RightPointModel.FK_TBL_ProgramAccess_TBL_Location">
+      <End Role="TBL_Location" EntitySet="TBL_Location" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Lottary_TBL_Media" Association="RightPointModel.FK_TBL_Lottary_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Lottary" EntitySet="TBL_Lottary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Position_TBL_Media" Association="RightPointModel.FK_TBL_Position_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Position" EntitySet="TBL_Position" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_OwnerGroup" Association="RightPointModel.FK_TBL_ProgramAccess_TBL_OwnerGroup">
+      <End Role="TBL_OwnerGroup" EntitySet="TBL_OwnerGroup" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_User_TBL_Profile" Association="RightPointModel.FK_TBL_User_TBL_Profile">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_User" EntitySet="TBL_User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Program_TBL_Program" Association="RightPointModel.FK_TBL_Program_TBL_Program">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_Program1" EntitySet="TBL_Program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_Program" Association="RightPointModel.FK_TBL_ProgramAccess_TBL_Program">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Question_TBL_Program" Association="RightPointModel.FK_TBL_Question_TBL_Program">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_Question" EntitySet="TBL_Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_WEEK_REFERENCE_TBL_PROG" Association="RightPointModel.FK_TBL_WEEK_REFERENCE_TBL_PROG">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_WeekRep" EntitySet="TBL_WeekRep" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_ProgramSeries" Association="RightPointModel.FK_TBL_ProgramAccess_TBL_ProgramSeries">
+      <End Role="TBL_ProgramSeries" EntitySet="TBL_ProgramSeries" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_QUES_REFERENCE_TBL_QUES" Association="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_QUES">
+      <End Role="TBL_Questionnaire" EntitySet="TBL_Questionnaire" />
+      <End Role="TBL_Question" EntitySet="TBL_Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Respondent_TBL_Questionnaire" Association="RightPointModel.FK_TBL_Respondent_TBL_Questionnaire">
+      <End Role="TBL_Questionnaire" EntitySet="TBL_Questionnaire" />
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Respondent_TBL_Responder" Association="RightPointModel.FK_TBL_Respondent_TBL_Responder">
+      <End Role="TBL_Responder" EntitySet="TBL_Responder" />
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TBL_ACC">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Redundant" Type="Double" />
+    <Property Name="FLD_Type" Type="Byte" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <NavigationProperty Name="TBL_Media" Relationship="RightPointModel.FK_TBL_ACC_TBL_Media" FromRole="TBL_ACC" ToRole="TBL_Media" />
+    <NavigationProperty Name="TBL_Media1" Relationship="RightPointModel.FK_TBL_ACC_TBL_Media1" FromRole="TBL_ACC" ToRole="TBL_Media" />
+    <NavigationProperty Name="TBL_Campaign" Relationship="RightPointModel.FK_TBL_Campaign_TBL_ACC" FromRole="TBL_ACC" ToRole="TBL_Campaign" />
+  </EntityType>
+  <EntityType Name="TBL_AMD">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Month" Type="Byte" />
+    <Property Name="FLD_Year" Type="Byte" />
+    <Property Name="FLD_Redundant" Type="Double" />
+    <Property Name="FLD_Type" Type="Byte" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <NavigationProperty Name="TBL_Media" Relationship="RightPointModel.FK_TBL_AMD_TBL_Media" FromRole="TBL_AMD" ToRole="TBL_Media" />
+  </EntityType>
+  <EntityType Name="TBL_Answer">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Respondent_FK" Type="Int64" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <Property Name="FLD_Option" Type="Byte" />
+    <NavigationProperty Name="TBL_Respondent" Relationship="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_RESP" FromRole="TBL_Answer" ToRole="TBL_Respondent" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_Answer_TBL_Program" FromRole="TBL_Answer" ToRole="TBL_Program" />
+  </EntityType>
+  <EntityType Name="TBL_Campaign">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Company_FK" Type="Int64" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_IsActive" Type="Boolean" />
+    <Property Name="FLD_StartDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_EndDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_ACC_FK" Type="Int64" />
+    <Property Name="FLD_Lottary_FK" Type="Int64" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+    <Property Name="FLD_TimeRange" Type="Byte" />
+    <Property Name="FLD_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_ACC" Relationship="RightPointModel.FK_TBL_Campaign_TBL_ACC" FromRole="TBL_Campaign" ToRole="TBL_ACC" />
+    <NavigationProperty Name="TBL_Company" Relationship="RightPointModel.FK_TBL_Campaign_TBL_Company" FromRole="TBL_Campaign" ToRole="TBL_Company" />
+    <NavigationProperty Name="TBL_Lottary" Relationship="RightPointModel.FK_TBL_Campaign_TBL_Lottary" FromRole="TBL_Campaign" ToRole="TBL_Lottary" />
+    <NavigationProperty Name="TBL_Questionnaire" Relationship="RightPointModel.FK_TBL_Campaign_TBL_Questionnaire" FromRole="TBL_Campaign" ToRole="TBL_Questionnaire" />
+    <NavigationProperty Name="TBL_CampaignAccess" Relationship="RightPointModel.FK_TBL_CampaignAccess_TBL_Campaign" FromRole="TBL_Campaign" ToRole="TBL_CampaignAccess" />
+  </EntityType>
+  <EntityType Name="TBL_CampaignAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Campaign_FK" Type="Int64" />
+    <Property Name="FLD_User_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Campaign" Relationship="RightPointModel.FK_TBL_CampaignAccess_TBL_Campaign" FromRole="TBL_CampaignAccess" ToRole="TBL_Campaign" />
+    <NavigationProperty Name="TBL_User" Relationship="RightPointModel.FK_TBL_CampaignAccess_TBL_User" FromRole="TBL_CampaignAccess" ToRole="TBL_User" />
+  </EntityType>
+  <EntityType Name="TBL_Category">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Tab" Type="Byte" />
+  </EntityType>
+  <EntityType Name="TBL_Channel">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <Property Name="FLD_Province_FK" Type="Int64" />
+    <Property Name="FLD_Broadcast" Type="Byte" />
+    <Property Name="FLD_Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Media" Relationship="RightPointModel.FK_TBL_Channel_TBL_Media" FromRole="TBL_Channel" ToRole="TBL_Media" />
+    <NavigationProperty Name="TBL_Province" Relationship="RightPointModel.FK_TBL_Channel_TBL_Province" FromRole="TBL_Channel" ToRole="TBL_Province" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CHAN" FromRole="TBL_Channel" ToRole="TBL_Program" />
+  </EntityType>
+  <EntityType Name="TBL_City">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Responder" Relationship="RightPointModel.FK_TBL_Responder_TBL_City" FromRole="TBL_City" ToRole="TBL_Responder" />
+  </EntityType>
+  <EntityType Name="TBL_Class">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_ClassNo" Type="Int32" />
+    <Property Name="FLD_PPS" Type="Double" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <Property Name="FLD_Contract_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Contract" Relationship="RightPointModel.FK_TBL_Class_TBL_Contract" FromRole="TBL_Class" ToRole="TBL_Contract" />
+    <NavigationProperty Name="TBL_Media" Relationship="RightPointModel.FK_TBL_Class_TBL_Media" FromRole="TBL_Class" ToRole="TBL_Media" />
+    <NavigationProperty Name="TBL_ContractAccess" Relationship="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CLAS" FromRole="TBL_Class" ToRole="TBL_ContractAccess" />
+    <NavigationProperty Name="TBL_ProgramAccess" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_Class" FromRole="TBL_Class" ToRole="TBL_ProgramAccess" />
+  </EntityType>
+  <EntityType Name="TBL_Company">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Group_FK" Type="Int64" />
+    <Property Name="FLD_Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Campaign" Relationship="RightPointModel.FK_TBL_Campaign_TBL_Company" FromRole="TBL_Company" ToRole="TBL_Campaign" />
+    <NavigationProperty Name="TBL_OwnerGroup" Relationship="RightPointModel.FK_TBL_Company_TBL_OwnerGroup" FromRole="TBL_Company" ToRole="TBL_OwnerGroup" />
+    <NavigationProperty Name="TBL_Profile" Relationship="RightPointModel.FK_TBL_Company_TBL_Profile" FromRole="TBL_Company" ToRole="TBL_Profile" />
+    <NavigationProperty Name="TBL_User" Relationship="RightPointModel.FK_TBL_User_TBL_Company" FromRole="TBL_Company" ToRole="TBL_User" />
+  </EntityType>
+  <EntityType Name="TBL_ContextType">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBL_Contract">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Commnet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Class" Relationship="RightPointModel.FK_TBL_Class_TBL_Contract" FromRole="TBL_Contract" ToRole="TBL_Class" />
+    <NavigationProperty Name="TBL_ContractAccess" Relationship="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CONT" FromRole="TBL_Contract" ToRole="TBL_ContractAccess" />
+    <NavigationProperty Name="TBL_ContractMD" Relationship="RightPointModel.FK_TBL_ContractMD_TBL_Contract" FromRole="TBL_Contract" ToRole="TBL_ContractMD" />
+  </EntityType>
+  <EntityType Name="TBL_ContractAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_ContractID_FK" Type="Int64" />
+    <Property Name="FLD_ClassID_FK" Type="Int64" />
+    <Property Name="FLD_Access" Type="Boolean" />
+    <NavigationProperty Name="TBL_Class" Relationship="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CLAS" FromRole="TBL_ContractAccess" ToRole="TBL_Class" />
+    <NavigationProperty Name="TBL_Contract" Relationship="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CONT" FromRole="TBL_ContractAccess" ToRole="TBL_Contract" />
+  </EntityType>
+  <EntityType Name="TBL_ContractMD">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_ContractID_FK" Type="Int64" />
+    <Property Name="FLD_Month" Type="Byte" />
+    <Property Name="FLD_Redundant" Type="Double" />
+    <Property Name="FLD_Type" Type="Byte" />
+    <NavigationProperty Name="TBL_Contract" Relationship="RightPointModel.FK_TBL_ContractMD_TBL_Contract" FromRole="TBL_ContractMD" ToRole="TBL_Contract" />
+  </EntityType>
+  <EntityType Name="TBL_Foretaste">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishImage" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBL_LCategory">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Lottary" Relationship="RightPointModel.FK_TBL_LOTT_REFERENCE_TBL_LCAT" FromRole="TBL_LCategory" ToRole="TBL_Lottary" />
+  </EntityType>
+  <EntityType Name="TBL_Limit">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Date" Type="DateTime" Precision="0" />
+    <Property Name="FLD_Day" Type="Byte" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_LIMI_REFERENCE_TBL_PROG" FromRole="TBL_Limit" ToRole="TBL_Program" />
+  </EntityType>
+  <EntityType Name="TBL_Location">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Loc" Type="Byte" />
+    <Property Name="FLD_Redundant" Type="Double" />
+    <Property Name="FLD_Type" Type="Byte" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <Property Name="FLD_After" Type="Boolean" />
+    <Property Name="FLD_Middle" Type="Boolean" />
+    <Property Name="FLD_Before" Type="Boolean" />
+    <NavigationProperty Name="TBL_Media" Relationship="RightPointModel.FK_TBL_Location_TBL_Media" FromRole="TBL_Location" ToRole="TBL_Media" />
+    <NavigationProperty Name="TBL_ProgramAccess" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_Location" FromRole="TBL_Location" ToRole="TBL_ProgramAccess" />
+  </EntityType>
+  <EntityType Name="TBL_Lottary">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Category_FK" Type="Int64" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Redundant" Type="Double" />
+    <Property Name="FLD_Type" Type="Byte" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <NavigationProperty Name="TBL_Campaign" Relationship="RightPointModel.FK_TBL_Campaign_TBL_Lottary" FromRole="TBL_Lottary" ToRole="TBL_Campaign" />
+    <NavigationProperty Name="TBL_LCategory" Relationship="RightPointModel.FK_TBL_LOTT_REFERENCE_TBL_LCAT" FromRole="TBL_Lottary" ToRole="TBL_LCategory" />
+    <NavigationProperty Name="TBL_Media" Relationship="RightPointModel.FK_TBL_Lottary_TBL_Media" FromRole="TBL_Lottary" ToRole="TBL_Media" />
+  </EntityType>
+  <EntityType Name="TBL_Media">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_ACC" Relationship="RightPointModel.FK_TBL_ACC_TBL_Media" FromRole="TBL_Media" ToRole="TBL_ACC" />
+    <NavigationProperty Name="TBL_ACC1" Relationship="RightPointModel.FK_TBL_ACC_TBL_Media1" FromRole="TBL_Media" ToRole="TBL_ACC" />
+    <NavigationProperty Name="TBL_AMD" Relationship="RightPointModel.FK_TBL_AMD_TBL_Media" FromRole="TBL_Media" ToRole="TBL_AMD" />
+    <NavigationProperty Name="TBL_Channel" Relationship="RightPointModel.FK_TBL_Channel_TBL_Media" FromRole="TBL_Media" ToRole="TBL_Channel" />
+    <NavigationProperty Name="TBL_Class" Relationship="RightPointModel.FK_TBL_Class_TBL_Media" FromRole="TBL_Media" ToRole="TBL_Class" />
+    <NavigationProperty Name="TBL_Location" Relationship="RightPointModel.FK_TBL_Location_TBL_Media" FromRole="TBL_Media" ToRole="TBL_Location" />
+    <NavigationProperty Name="TBL_Lottary" Relationship="RightPointModel.FK_TBL_Lottary_TBL_Media" FromRole="TBL_Media" ToRole="TBL_Lottary" />
+    <NavigationProperty Name="TBL_Position" Relationship="RightPointModel.FK_TBL_Position_TBL_Media" FromRole="TBL_Media" ToRole="TBL_Position" />
+  </EntityType>
+  <EntityType Name="TBL_OwnerGroup">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Commnet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBL_Company" Relationship="RightPointModel.FK_TBL_Company_TBL_OwnerGroup" FromRole="TBL_OwnerGroup" ToRole="TBL_Company" />
+    <NavigationProperty Name="TBL_ProgramAccess" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_OwnerGroup" FromRole="TBL_OwnerGroup" ToRole="TBL_ProgramAccess" />
+  </EntityType>
+  <EntityType Name="TBL_Position">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Redundant" Type="Double" />
+    <Property Name="FLD_Type" Type="Byte" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <NavigationProperty Name="TBL_Media" Relationship="RightPointModel.FK_TBL_Position_TBL_Media" FromRole="TBL_Position" ToRole="TBL_Media" />
+  </EntityType>
+  <EntityType Name="TBL_Profile">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_IsEnabled" Type="Boolean" />
+    <Property Name="FLD_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_CreateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TBL_Company" Relationship="RightPointModel.FK_TBL_Company_TBL_Profile" FromRole="TBL_Profile" ToRole="TBL_Company" />
+    <NavigationProperty Name="TBL_User" Relationship="RightPointModel.FK_TBL_User_TBL_Profile" FromRole="TBL_Profile" ToRole="TBL_User" />
+  </EntityType>
+  <EntityType Name="TBL_Program">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Channel_FK" Type="Int64" />
+    <Property Name="FLD_StartTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_EndTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Enable" Type="Boolean" />
+    <Property Name="FLD_PlayTime" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Before" Type="Boolean" />
+    <Property Name="FLD_Middle" Type="Boolean" />
+    <Property Name="FLD_After" Type="Boolean" />
+    <NavigationProperty Name="TBL_Answer" Relationship="RightPointModel.FK_TBL_Answer_TBL_Program" FromRole="TBL_Program" ToRole="TBL_Answer" />
+    <NavigationProperty Name="TBL_Channel" Relationship="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CHAN" FromRole="TBL_Program" ToRole="TBL_Channel" />
+    <NavigationProperty Name="TBL_Limit" Relationship="RightPointModel.FK_TBL_LIMI_REFERENCE_TBL_PROG" FromRole="TBL_Program" ToRole="TBL_Limit" />
+    <NavigationProperty Name="TBL_Program1" Relationship="RightPointModel.FK_TBL_Program_TBL_Program" FromRole="TBL_Program" ToRole="TBL_Program1" />
+    <NavigationProperty Name="TBL_Program2" Relationship="RightPointModel.FK_TBL_Program_TBL_Program" FromRole="TBL_Program1" ToRole="TBL_Program" />
+    <NavigationProperty Name="TBL_ProgramAccess" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_Program" FromRole="TBL_Program" ToRole="TBL_ProgramAccess" />
+    <NavigationProperty Name="TBL_Question" Relationship="RightPointModel.FK_TBL_Question_TBL_Program" FromRole="TBL_Program" ToRole="TBL_Question" />
+    <NavigationProperty Name="TBL_WeekRep" Relationship="RightPointModel.FK_TBL_WEEK_REFERENCE_TBL_PROG" FromRole="TBL_Program" ToRole="TBL_WeekRep" />
+  </EntityType>
+  <EntityType Name="TBL_ProgramAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <Property Name="FLD_Group_FK" Type="Int64" />
+    <Property Name="FLD_Class_FK" Type="Int64" />
+    <Property Name="FLD_Series_FK" Type="Int64" />
+    <Property Name="FLD_Location_FK" Type="Int64" />
+    <Property Name="FLD_Extra" Type="Int64" />
+    <Property Name="FLD_ExtraType" Type="Byte" />
+    <Property Name="FLD_Month" Type="Byte" />
+    <NavigationProperty Name="TBL_Class" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_Class" FromRole="TBL_ProgramAccess" ToRole="TBL_Class" />
+    <NavigationProperty Name="TBL_Location" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_Location" FromRole="TBL_ProgramAccess" ToRole="TBL_Location" />
+    <NavigationProperty Name="TBL_OwnerGroup" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_OwnerGroup" FromRole="TBL_ProgramAccess" ToRole="TBL_OwnerGroup" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_Program" FromRole="TBL_ProgramAccess" ToRole="TBL_Program" />
+    <NavigationProperty Name="TBL_ProgramSeries" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_ProgramSeries" FromRole="TBL_ProgramAccess" ToRole="TBL_ProgramSeries" />
+  </EntityType>
+  <EntityType Name="TBL_ProgramSeries">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Redundant" Type="Double" />
+    <Property Name="FLD_Type" Type="Byte" />
+    <NavigationProperty Name="TBL_ProgramAccess" Relationship="RightPointModel.FK_TBL_ProgramAccess_TBL_ProgramSeries" FromRole="TBL_ProgramSeries" ToRole="TBL_ProgramAccess" />
+  </EntityType>
+  <EntityType Name="TBL_Province">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Redundant" Type="Double" />
+    <Property Name="FLD_Type" Type="Byte" />
+    <NavigationProperty Name="TBL_Channel" Relationship="RightPointModel.FK_TBL_Channel_TBL_Province" FromRole="TBL_Province" ToRole="TBL_Channel" />
+  </EntityType>
+  <EntityType Name="TBL_Question">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_Question_TBL_Program" FromRole="TBL_Question" ToRole="TBL_Program" />
+    <NavigationProperty Name="TBL_Questionnaire" Relationship="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_QUES" FromRole="TBL_Question" ToRole="TBL_Questionnaire" />
+  </EntityType>
+  <EntityType Name="TBL_Questionnaire">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_QNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_IsPublish" Type="Boolean" />
+    <Property Name="FLD_CreatDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="TBL_Campaign" Relationship="RightPointModel.FK_TBL_Campaign_TBL_Questionnaire" FromRole="TBL_Questionnaire" ToRole="TBL_Campaign" />
+    <NavigationProperty Name="TBL_Question" Relationship="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_QUES" FromRole="TBL_Questionnaire" ToRole="TBL_Question" />
+    <NavigationProperty Name="TBL_Respondent" Relationship="RightPointModel.FK_TBL_Respondent_TBL_Questionnaire" FromRole="TBL_Questionnaire" ToRole="TBL_Respondent" />
+  </EntityType>
+  <EntityType Name="TBL_Respondent">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+    <Property Name="FLD_Responder_FK" Type="Int64" />
+    <Property Name="FLD_Inquirer_FK" Type="Int64" />
+    <Property Name="FLD_BestAdvertising" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_BestCompany" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_BestClass" Type="Int64" />
+    <Property Name="FLD_WorstAdvertising" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_WorstCompany" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_WorstClass" Type="Int64" />
+    <Property Name="FLD_WatchTV" Type="Byte" />
+    <Property Name="FLD_IsPublish" Type="Boolean" />
+    <Property Name="FLD_CreateDate" Type="DateTime" Precision="0" />
+    <Property Name="FLD_BestAdvertising2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_BestCompany2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_BestClass2" Type="Int64" />
+    <Property Name="FLD_WorstAdvertising2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_WorstCompany2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_WorstClass2" Type="Int64" />
+    <NavigationProperty Name="TBL_Answer" Relationship="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_RESP" FromRole="TBL_Respondent" ToRole="TBL_Answer" />
+    <NavigationProperty Name="TBL_Questionnaire" Relationship="RightPointModel.FK_TBL_Respondent_TBL_Questionnaire" FromRole="TBL_Respondent" ToRole="TBL_Questionnaire" />
+    <NavigationProperty Name="TBL_Responder" Relationship="RightPointModel.FK_TBL_Respondent_TBL_Responder" FromRole="TBL_Respondent" ToRole="TBL_Responder" />
+  </EntityType>
+  <EntityType Name="TBL_Responder">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Education" Type="Byte" />
+    <Property Name="FLD_Ages" Type="Byte" />
+    <Property Name="FLD_Occupation" Type="Byte" />
+    <Property Name="FLD_FamilyIncome" Type="Byte" />
+    <Property Name="FLD_MaritalStatus" Type="Byte" />
+    <Property Name="FLD_Cooperation" Type="Boolean" />
+    <Property Name="FLD_Gender" Type="Boolean" />
+    <Property Name="FLD_City_FK" Type="Int32" />
+    <NavigationProperty Name="TBL_City" Relationship="RightPointModel.FK_TBL_Responder_TBL_City" FromRole="TBL_Responder" ToRole="TBL_City" />
+    <NavigationProperty Name="TBL_Respondent" Relationship="RightPointModel.FK_TBL_Respondent_TBL_Responder" FromRole="TBL_Responder" ToRole="TBL_Respondent" />
+  </EntityType>
+  <EntityType Name="TBL_User">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Company_FK" Type="Int64" />
+    <Property Name="FLD_Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Gender" Type="Boolean" />
+    <Property Name="FLD_Cell" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_DisableDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Access" Type="Byte" />
+    <Property Name="FLD_LastVisit" Type="DateTime" Precision="3" />
+    <Property Name="FLD_FirstVisit" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TBL_CampaignAccess" Relationship="RightPointModel.FK_TBL_CampaignAccess_TBL_User" FromRole="TBL_User" ToRole="TBL_CampaignAccess" />
+    <NavigationProperty Name="TBL_Company" Relationship="RightPointModel.FK_TBL_User_TBL_Company" FromRole="TBL_User" ToRole="TBL_Company" />
+    <NavigationProperty Name="TBL_Profile" Relationship="RightPointModel.FK_TBL_User_TBL_Profile" FromRole="TBL_User" ToRole="TBL_Profile" />
+  </EntityType>
+  <EntityType Name="TBL_WeekRep">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FLD_Day" Type="Byte" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <NavigationProperty Name="TBL_Program" Relationship="RightPointModel.FK_TBL_WEEK_REFERENCE_TBL_PROG" FromRole="TBL_WeekRep" ToRole="TBL_Program" />
+  </EntityType>
+  <EntityType Name="VIW_Answer">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Respondent_FK" Type="Int64" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <Property Name="FLD_Option" Type="Byte" />
+    <Property Name="FLD_QNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_IsPublish" Type="Boolean" />
+    <Property Name="FLD_ResponderName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ResponderEducation" Type="Byte" />
+    <Property Name="FLD_ResponderAges" Type="Byte" />
+    <Property Name="FLD_ResponderOccupation" Type="Byte" />
+    <Property Name="FLD_ResponderFamilyIncome" Type="Byte" />
+    <Property Name="FLD_ResponderCooperation" Type="Boolean" />
+    <Property Name="FLD_ResponderGender" Type="Boolean" />
+    <Property Name="FLD_InquirerName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_InquirerTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_InquirerGender" Type="Boolean" />
+    <Property Name="FLD_InquirerCompanyTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ProgramTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Before" Type="Boolean" />
+    <Property Name="FLD_Middle" Type="Boolean" />
+    <Property Name="FLD_After" Type="Boolean" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+  </EntityType>
+  <EntityType Name="VIW_AutorizeList">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_WeekRep" />
+      <PropertyRef Name="FLD_Limit" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Respondent_FK" Type="Int64" />
+    <Property Name="FLD_Option" Type="Byte" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <Property Name="FLD_Responder_FK" Type="Int64" />
+    <Property Name="FLD_ProgramTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Before" Type="Boolean" />
+    <Property Name="FLD_Middle" Type="Boolean" />
+    <Property Name="FLD_After" Type="Boolean" />
+    <Property Name="FLD_Group_FK" Type="Int64" />
+    <Property Name="FLD_Class_FK" Type="Int64" />
+    <Property Name="FLD_Series_FK" Type="Int64" />
+    <Property Name="FLD_Location_FK" Type="Int64" />
+    <Property Name="FLD_Month" Type="Byte" />
+    <Property Name="FLD_Extra" Type="Int64" />
+    <Property Name="FLD_ExtraType" Type="Byte" />
+    <Property Name="FLD_PPS" Type="Double" />
+    <Property Name="FLD_ClassNo" Type="Int32" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <Property Name="FLD_MediaTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_LocationTitle" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Loc" Type="Byte" />
+    <Property Name="FLD_LocationRedundant" Type="Double" />
+    <Property Name="FLD_LocationType" Type="Byte" />
+    <Property Name="FLD_SeriesTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_SeriesRedundant" Type="Double" />
+    <Property Name="FLD_SeriesType" Type="Byte" />
+    <Property Name="FLD_ContactTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Channel_FK" Type="Int64" />
+    <Property Name="FLD_StartTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_EndTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Enable" Type="Boolean" />
+    <Property Name="FLD_PlayTime" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_QNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_QuestionnaireIsPublish" Type="Boolean" />
+    <Property Name="FLD_CreatDate" Type="DateTime" Precision="0" />
+    <Property Name="FLD_RespondentIsPublish" Type="Boolean" />
+    <Property Name="FLD_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Education" Type="Byte" />
+    <Property Name="FLD_Ages" Type="Byte" />
+    <Property Name="FLD_Occupation" Type="Byte" />
+    <Property Name="FLD_FamilyIncome" Type="Byte" />
+    <Property Name="FLD_MaritalStatus" Type="Byte" />
+    <Property Name="FLD_Cooperation" Type="Boolean" />
+    <Property Name="FLD_Gender" Type="Boolean" />
+    <Property Name="FLD_ChannelTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Province_FK" Type="Int64" />
+    <Property Name="FLD_Broadcast" Type="Byte" />
+    <Property Name="FLD_ProvinceTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ProvinceType" Type="Byte" />
+    <Property Name="FLD_ProvinceRedundant" Type="Double" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+    <Property Name="FLD_WeekRep" Type="Int32" Nullable="false" />
+    <Property Name="FLD_Limit" Type="Int32" Nullable="false" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishChannelTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_City_FK" Type="Int32" />
+    <Property Name="FLD_CityName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIW_Campaign">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_CompanyTitle" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Company_FK" Type="Int64" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_IsActive" Type="Boolean" />
+    <Property Name="FLD_CompanyTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_CompanyImage" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_CompanyTel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_GroupName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_GroupComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_StartDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_EndDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_ACC_FK" Type="Int64" />
+    <Property Name="FLD_Lottary_FK" Type="Int64" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+    <Property Name="FLD_LottaryTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ACCTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_QNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_QTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Group_FK" Type="Int64" />
+    <Property Name="FLD_TimeRange" Type="Byte" />
+    <Property Name="FLD_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIW_CampaignAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_QuestionnaireTitle" />
+      <PropertyRef Name="FLD_QuestionnaireEnglishTitle" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Campaign_FK" Type="Int64" />
+    <Property Name="FLD_User_FK" Type="Int64" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Gender" Type="Boolean" />
+    <Property Name="FLD_Lottary_FK" Type="Int64" />
+    <Property Name="FLD_ACC_FK" Type="Int64" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_CompanyEnglishName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_GroupName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_GroupEnglishName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_QuestionnaireTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_QuestionnaireEnglishTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_EnglishComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIW_Company">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_Title" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Group_FK" Type="Int64" />
+    <Property Name="FLD_Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_IsEnabled" Type="Boolean" />
+    <Property Name="FLD_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_GroupName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_GroupComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIW_ContractProgram">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_ContractTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Commnet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ClassNo" Type="Int32" />
+    <Property Name="FLD_PPS" Type="Double" />
+    <Property Name="FLD_Media" Type="Byte" />
+    <Property Name="FLD_ChannelTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ProgramTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Class_FK" Type="Int64" />
+    <Property Name="FLD_Channel_FK" Type="Int64" />
+    <Property Name="FLD_StartTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_EndTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_PlayTime" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <Property Name="FLD_Before" Type="Boolean" />
+    <Property Name="FLD_Middle" Type="Boolean" />
+    <Property Name="FLD_After" Type="Boolean" />
+    <Property Name="FLD_Enable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="VIW_Contracts">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Commnet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Class" Type="Int32" />
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIW_Lottary">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Category_FK" Type="Int64" />
+    <Property Name="FLD_Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_CategoryTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Redundant" Type="Double" />
+    <Property Name="FLD_RedundantType" Type="Byte" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIW_Profile">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_IsEnabled" Type="Boolean" />
+    <Property Name="FLD_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Gender" Type="Boolean" />
+    <Property Name="FLD_Username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Cell" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_DisableDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_CompanyTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Access" Type="Byte" />
+    <Property Name="FLD_Company_FK" Type="Int64" />
+  </EntityType>
+  <EntityType Name="VIW_Program">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Channel_FK" Type="Int64" />
+    <Property Name="FLD_StartTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_EndTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Enable" Type="Boolean" />
+    <Property Name="FLD_PlayTime" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_ChannelMedia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ChannelName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ChannelBroadcast" Type="Byte" />
+    <Property Name="FLD_Before" Type="Boolean" />
+    <Property Name="FLD_Middle" Type="Boolean" />
+    <Property Name="FLD_After" Type="Boolean" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <Property Name="FLD_EnglishTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIW_ProgramAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_Extra" Type="Int64" />
+    <Property Name="FLD_ExtraType" Type="Byte" />
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <Property Name="FLD_Group_FK" Type="Int64" />
+    <Property Name="FLD_Class_FK" Type="Int64" />
+    <Property Name="FLD_Program" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Group" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ClassNo" Type="Int32" />
+    <Property Name="FLD_PPS" Type="Double" />
+    <Property Name="FLD_Media_FK" Type="Byte" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Channel" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Series_FK" Type="Int64" />
+    <Property Name="FLD_Location_FK" Type="Int64" />
+    <Property Name="FLD_LocationTitle" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Month" Type="Byte" />
+  </EntityType>
+  <EntityType Name="VIW_Question">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <Property Name="FLD_Channel_FK" Type="Int64" />
+    <Property Name="FLD_ProgramTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_StartTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_EndTime" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Enable" Type="Boolean" />
+    <Property Name="FLD_PlayTime" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Before" Type="Boolean" />
+    <Property Name="FLD_Middle" Type="Boolean" />
+    <Property Name="FLD_After" Type="Boolean" />
+    <Property Name="FLD_ChannelName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ChannelBroadcast" Type="Byte" />
+    <Property Name="FLD_QNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_IsPublish" Type="Boolean" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIW_Respondent">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_QNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_QTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Questionnaire_FK" Type="Int64" />
+    <Property Name="FLD_Responder_FK" Type="Int64" />
+    <Property Name="FLD_BestCompany" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_BestClass" Type="Int64" />
+    <Property Name="FLD_WorstAdvertising" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_WorstCompany" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_WatchTV" Type="Byte" />
+    <Property Name="FLD_WorstClass" Type="Int64" />
+    <Property Name="FLD_Inquirer_FK" Type="Int64" />
+    <Property Name="FLD_BestAdvertising" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ResponderName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_ResponderEducation" Type="Byte" />
+    <Property Name="FLD_ResponderAges" Type="Byte" />
+    <Property Name="FLD_ResponderOccupation" Type="Byte" />
+    <Property Name="FLD_ResponderFamilyIncome" Type="Byte" />
+    <Property Name="FLD_ResponderCooperation" Type="Boolean" />
+    <Property Name="FLD_ResponderGender" Type="Boolean" />
+    <Property Name="FLD_InquirerName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_IsPublish" Type="Boolean" />
+    <Property Name="FLD_ResponderMaritalStatus" Type="Byte" />
+    <Property Name="FLD_CreateDate" Type="DateTime" Precision="0" />
+    <Property Name="FLD_BestAdvertising2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_BestCompany2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_BestClass2" Type="Int64" />
+    <Property Name="FLD_WorstAdvertising2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_WorstCompany2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_WorstClass2" Type="Int64" />
+    <Property Name="FLD_ResponderCity" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VIW_User">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_FirstVisit" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="Int64" Nullable="false" />
+    <Property Name="FLD_Company_FK" Type="Int64" />
+    <Property Name="FLD_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Gender" Type="Boolean" />
+    <Property Name="FLD_Username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_Cell" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_DisableDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_Access" Type="Byte" />
+    <Property Name="FLD_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FLD_IsEnabled" Type="Boolean" />
+    <Property Name="FLD_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FLD_CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="FLD_LastVisit" Type="DateTime" Precision="3" />
+    <Property Name="FLD_FirstVisit" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIW_WeekReps">
+    <Key>
+      <PropertyRef Name="FLD_WeekRep" />
+      <PropertyRef Name="FLD_Limit" />
+    </Key>
+    <Property Name="FLD_Program_FK" Type="Int64" />
+    <Property Name="FLD_WeekRep" Type="Int32" Nullable="false" />
+    <Property Name="FLD_Limit" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TBL_ACC_TBL_Media">
+    <End Type="RightPointModel.TBL_Media" Role="TBL_Media" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ACC" Role="TBL_ACC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ACC">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ACC_TBL_Media1">
+    <End Type="RightPointModel.TBL_Media" Role="TBL_Media" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ACC" Role="TBL_ACC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ACC">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Campaign_TBL_ACC">
+    <End Type="RightPointModel.TBL_ACC" Role="TBL_ACC" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Campaign" Role="TBL_Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ACC">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Campaign">
+        <PropertyRef Name="FLD_ACC_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_AMD_TBL_Media">
+    <End Type="RightPointModel.TBL_Media" Role="TBL_Media" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_AMD" Role="TBL_AMD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_AMD">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ANSW_REFERENCE_TBL_RESP">
+    <End Type="RightPointModel.TBL_Respondent" Role="TBL_Respondent" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Answer" Role="TBL_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Respondent">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Answer">
+        <PropertyRef Name="FLD_Respondent_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Answer_TBL_Program">
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Answer" Role="TBL_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Answer">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Campaign_TBL_Company">
+    <End Type="RightPointModel.TBL_Company" Role="TBL_Company" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Campaign" Role="TBL_Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Company">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Campaign">
+        <PropertyRef Name="FLD_Company_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Campaign_TBL_Lottary">
+    <End Type="RightPointModel.TBL_Lottary" Role="TBL_Lottary" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Campaign" Role="TBL_Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Lottary">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Campaign">
+        <PropertyRef Name="FLD_Lottary_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Campaign_TBL_Questionnaire">
+    <End Type="RightPointModel.TBL_Questionnaire" Role="TBL_Questionnaire" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Campaign" Role="TBL_Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Questionnaire">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Campaign">
+        <PropertyRef Name="FLD_Questionnaire_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CampaignAccess_TBL_Campaign">
+    <End Type="RightPointModel.TBL_Campaign" Role="TBL_Campaign" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_CampaignAccess" Role="TBL_CampaignAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Campaign">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_CampaignAccess">
+        <PropertyRef Name="FLD_Campaign_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CampaignAccess_TBL_User">
+    <End Type="RightPointModel.TBL_User" Role="TBL_User" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_CampaignAccess" Role="TBL_CampaignAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_User">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_CampaignAccess">
+        <PropertyRef Name="FLD_User_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Channel_TBL_Media">
+    <End Type="RightPointModel.TBL_Media" Role="TBL_Media" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Channel" Role="TBL_Channel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Channel">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Channel_TBL_Province">
+    <End Type="RightPointModel.TBL_Province" Role="TBL_Province" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Channel" Role="TBL_Channel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Province">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Channel">
+        <PropertyRef Name="FLD_Province_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_PROG_REFERENCE_TBL_CHAN">
+    <End Type="RightPointModel.TBL_Channel" Role="TBL_Channel" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Channel">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Program">
+        <PropertyRef Name="FLD_Channel_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Responder_TBL_City">
+    <End Type="RightPointModel.TBL_City" Role="TBL_City" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Responder" Role="TBL_Responder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_City">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Responder">
+        <PropertyRef Name="FLD_City_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Class_TBL_Contract">
+    <End Type="RightPointModel.TBL_Contract" Role="TBL_Contract" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Class" Role="TBL_Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Contract">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Class">
+        <PropertyRef Name="FLD_Contract_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Class_TBL_Media">
+    <End Type="RightPointModel.TBL_Media" Role="TBL_Media" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Class" Role="TBL_Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Class">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CONT_REFERENCE_TBL_CLAS">
+    <End Type="RightPointModel.TBL_Class" Role="TBL_Class" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ContractAccess" Role="TBL_ContractAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Class">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ContractAccess">
+        <PropertyRef Name="FLD_ClassID_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_Class">
+    <End Type="RightPointModel.TBL_Class" Role="TBL_Class" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ProgramAccess" Role="TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Class">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Class_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Company_TBL_OwnerGroup">
+    <End Type="RightPointModel.TBL_OwnerGroup" Role="TBL_OwnerGroup" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Company" Role="TBL_Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_OwnerGroup">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Company">
+        <PropertyRef Name="FLD_Group_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Company_TBL_Profile">
+    <End Type="RightPointModel.TBL_Profile" Role="TBL_Profile" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Company" Role="TBL_Company" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Company">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_User_TBL_Company">
+    <End Type="RightPointModel.TBL_Company" Role="TBL_Company" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_User" Role="TBL_User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Company">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_User">
+        <PropertyRef Name="FLD_Company_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CONT_REFERENCE_TBL_CONT">
+    <End Type="RightPointModel.TBL_Contract" Role="TBL_Contract" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ContractAccess" Role="TBL_ContractAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Contract">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ContractAccess">
+        <PropertyRef Name="FLD_ContractID_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ContractMD_TBL_Contract">
+    <End Type="RightPointModel.TBL_Contract" Role="TBL_Contract" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ContractMD" Role="TBL_ContractMD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Contract">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ContractMD">
+        <PropertyRef Name="FLD_ContractID_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_LOTT_REFERENCE_TBL_LCAT">
+    <End Type="RightPointModel.TBL_LCategory" Role="TBL_LCategory" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Lottary" Role="TBL_Lottary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_LCategory">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Lottary">
+        <PropertyRef Name="FLD_Category_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_LIMI_REFERENCE_TBL_PROG">
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Limit" Role="TBL_Limit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Limit">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Location_TBL_Media">
+    <End Type="RightPointModel.TBL_Media" Role="TBL_Media" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Location" Role="TBL_Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Location">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_Location">
+    <End Type="RightPointModel.TBL_Location" Role="TBL_Location" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ProgramAccess" Role="TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Location">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Location_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Lottary_TBL_Media">
+    <End Type="RightPointModel.TBL_Media" Role="TBL_Media" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Lottary" Role="TBL_Lottary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Lottary">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Position_TBL_Media">
+    <End Type="RightPointModel.TBL_Media" Role="TBL_Media" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Position" Role="TBL_Position" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Position">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_OwnerGroup">
+    <End Type="RightPointModel.TBL_OwnerGroup" Role="TBL_OwnerGroup" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ProgramAccess" Role="TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_OwnerGroup">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Group_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_User_TBL_Profile">
+    <End Type="RightPointModel.TBL_Profile" Role="TBL_Profile" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_User" Role="TBL_User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_User">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Program_TBL_Program">
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="1" />
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Program1">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_Program">
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ProgramAccess" Role="TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Question_TBL_Program">
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Question" Role="TBL_Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Question">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_WEEK_REFERENCE_TBL_PROG">
+    <End Type="RightPointModel.TBL_Program" Role="TBL_Program" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_WeekRep" Role="TBL_WeekRep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_WeekRep">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_ProgramSeries">
+    <End Type="RightPointModel.TBL_ProgramSeries" Role="TBL_ProgramSeries" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_ProgramAccess" Role="TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ProgramSeries">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Series_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_QUES_REFERENCE_TBL_QUES">
+    <End Type="RightPointModel.TBL_Questionnaire" Role="TBL_Questionnaire" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Question" Role="TBL_Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Questionnaire">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Question">
+        <PropertyRef Name="FLD_Questionnaire_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Respondent_TBL_Questionnaire">
+    <End Type="RightPointModel.TBL_Questionnaire" Role="TBL_Questionnaire" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Respondent" Role="TBL_Respondent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Questionnaire">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Respondent">
+        <PropertyRef Name="FLD_Questionnaire_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Respondent_TBL_Responder">
+    <End Type="RightPointModel.TBL_Responder" Role="TBL_Responder" Multiplicity="0..1" />
+    <End Type="RightPointModel.TBL_Respondent" Role="TBL_Respondent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Responder">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Respondent">
+        <PropertyRef Name="FLD_Responder_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

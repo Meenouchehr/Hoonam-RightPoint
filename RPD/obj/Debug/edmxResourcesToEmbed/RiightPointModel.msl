@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RightPointModelStoreContainer" CdmEntityContainer="RightPointEntities">
+    <EntitySetMapping Name="TBL_ACC">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_ACC">
+        <MappingFragment StoreEntitySet="TBL_ACC">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Coefficient" ColumnName="FLD_Coefficient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Addresses">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Addresses">
+        <MappingFragment StoreEntitySet="TBL_Addresses">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Address" ColumnName="FLD_Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Agent">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Agent">
+        <MappingFragment StoreEntitySet="TBL_Agent">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_" ColumnName="FLD_" />
+          <ScalarProperty Name="FLD_Corporation_FK" ColumnName="FLD_Corporation_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_AMD">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_AMD">
+        <MappingFragment StoreEntitySet="TBL_AMD">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Month" ColumnName="FLD_Month" />
+          <ScalarProperty Name="FLD_Year" ColumnName="FLD_Year" />
+          <ScalarProperty Name="FLD_Percent" ColumnName="FLD_Percent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Answer">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Answer">
+        <MappingFragment StoreEntitySet="TBL_Answer">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Respondent_FK" ColumnName="FLD_Respondent_FK" />
+          <ScalarProperty Name="FLD_Question_FK" ColumnName="FLD_Question_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Category">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Category">
+        <MappingFragment StoreEntitySet="TBL_Category">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Tab" ColumnName="FLD_Tab" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Channel">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Channel">
+        <MappingFragment StoreEntitySet="TBL_Channel">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Media" ColumnName="FLD_Media" />
+          <ScalarProperty Name="FLD_Broadcast" ColumnName="FLD_Broadcast" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Class">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Class">
+        <MappingFragment StoreEntitySet="TBL_Class">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_ClassNo" ColumnName="FLD_ClassNo" />
+          <ScalarProperty Name="FLD_PPS" ColumnName="FLD_PPS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Contract">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Contract">
+        <MappingFragment StoreEntitySet="TBL_Contract">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Commnet" ColumnName="FLD_Commnet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_ContractAccess">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_ContractAccess">
+        <MappingFragment StoreEntitySet="TBL_ContractAccess">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_ContractID_FK" ColumnName="FLD_ContractID_FK" />
+          <ScalarProperty Name="FLD_ClassID_FK" ColumnName="FLD_ClassID_FK" />
+          <ScalarProperty Name="FLD_Access" ColumnName="FLD_Access" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Corporation">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Corporation">
+        <MappingFragment StoreEntitySet="TBL_Corporation">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Descriptive">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Descriptive">
+        <MappingFragment StoreEntitySet="TBL_Descriptive">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Descrip" ColumnName="FLD_Descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Emails">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Emails">
+        <MappingFragment StoreEntitySet="TBL_Emails">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Email" ColumnName="FLD_Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_LCategory">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_LCategory">
+        <MappingFragment StoreEntitySet="TBL_LCategory">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Limit">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Limit">
+        <MappingFragment StoreEntitySet="TBL_Limit">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Date" ColumnName="FLD_Date" />
+          <ScalarProperty Name="FLD_Day" ColumnName="FLD_Day" />
+          <ScalarProperty Name="FLD_Program_FK" ColumnName="FLD_Program_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Lottary">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Lottary">
+        <MappingFragment StoreEntitySet="TBL_Lottary">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Category_FK" ColumnName="FLD_Category_FK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Percent" ColumnName="FLD_Percent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Names">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Names">
+        <MappingFragment StoreEntitySet="TBL_Names">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_ForeName" ColumnName="FLD_ForeName" />
+          <ScalarProperty Name="FLD_Surname" ColumnName="FLD_Surname" />
+          <ScalarProperty Name="FLD_Gender" ColumnName="FLD_Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Optional">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Optional">
+        <MappingFragment StoreEntitySet="TBL_Optional">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Option" ColumnName="FLD_Option" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_OwnerGroup">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_OwnerGroup">
+        <MappingFragment StoreEntitySet="TBL_OwnerGroup">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Commnet" ColumnName="FLD_Commnet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Position">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Position">
+        <MappingFragment StoreEntitySet="TBL_Position">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Percent" ColumnName="FLD_Percent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Profile">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Profile">
+        <MappingFragment StoreEntitySet="TBL_Profile">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Access" ColumnName="FLD_Access" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Program">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Program">
+        <MappingFragment StoreEntitySet="TBL_Program">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Class_FK" ColumnName="FLD_Class_FK" />
+          <ScalarProperty Name="FLD_Channel_FK" ColumnName="FLD_Channel_FK" />
+          <ScalarProperty Name="FLD_StartTime" ColumnName="FLD_StartTime" />
+          <ScalarProperty Name="FLD_EndTime" ColumnName="FLD_EndTime" />
+          <ScalarProperty Name="FLD_Enable" ColumnName="FLD_Enable" />
+          <ScalarProperty Name="FLD_Before" ColumnName="FLD_Before" />
+          <ScalarProperty Name="FLD_Middle" ColumnName="FLD_Middle" />
+          <ScalarProperty Name="FLD_After" ColumnName="FLD_After" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_QEOptional">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_QEOptional">
+        <MappingFragment StoreEntitySet="TBL_QEOptional">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_QExtra_FK" ColumnName="FLD_QExtra_FK" />
+          <ScalarProperty Name="FLD_Option" ColumnName="FLD_Option" />
+          <ScalarProperty Name="FLD_Choice" ColumnName="FLD_Choice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_QExtra">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_QExtra">
+        <MappingFragment StoreEntitySet="TBL_QExtra">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Question" ColumnName="FLD_Question" />
+          <ScalarProperty Name="FLD_Optional" ColumnName="FLD_Optional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_QPOptional">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_QPOptional">
+        <MappingFragment StoreEntitySet="TBL_QPOptional">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_QProgram_FK" ColumnName="FLD_QProgram_FK" />
+          <ScalarProperty Name="FLD_Option" ColumnName="FLD_Option" />
+          <ScalarProperty Name="FLD_Choice" ColumnName="FLD_Choice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_QProgram">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_QProgram">
+        <MappingFragment StoreEntitySet="TBL_QProgram">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Program_FK" ColumnName="FLD_Program_FK" />
+          <ScalarProperty Name="FLD_Optional" ColumnName="FLD_Optional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Question">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Question">
+        <MappingFragment StoreEntitySet="TBL_Question">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Category_FK" ColumnName="FLD_Category_FK" />
+          <ScalarProperty Name="FLD_Questionnaire_FK" ColumnName="FLD_Questionnaire_FK" />
+          <ScalarProperty Name="FLD_Tab" ColumnName="FLD_Tab" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Questionnaire">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Questionnaire">
+        <MappingFragment StoreEntitySet="TBL_Questionnaire">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_QNo" ColumnName="FLD_QNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_RC">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_RC">
+        <MappingFragment StoreEntitySet="TBL_RC">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_CAccess" ColumnName="FLD_CAccess" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Respondent">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Respondent">
+        <MappingFragment StoreEntitySet="TBL_Respondent">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Questionnaire_FK" ColumnName="FLD_Questionnaire_FK" />
+          <ScalarProperty Name="FLD_Responder_FK" ColumnName="FLD_Responder_FK" />
+          <ScalarProperty Name="FLD_inquirer_FK" ColumnName="FLD_inquirer_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Responder">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Responder">
+        <MappingFragment StoreEntitySet="TBL_Responder">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Education" ColumnName="FLD_Education" />
+          <ScalarProperty Name="FLD_Ages" ColumnName="FLD_Ages" />
+          <ScalarProperty Name="FLD_Occupation" ColumnName="FLD_Occupation" />
+          <ScalarProperty Name="FLD_FamilyIncome" ColumnName="FLD_FamilyIncome" />
+          <ScalarProperty Name="FLD_Cooperation" ColumnName="FLD_Cooperation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Tels">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Tels">
+        <MappingFragment StoreEntitySet="TBL_Tels">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Tel" ColumnName="FLD_Tel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Titles">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_Titles">
+        <MappingFragment StoreEntitySet="TBL_Titles">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_User">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_User">
+        <MappingFragment StoreEntitySet="TBL_User">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Email" ColumnName="FLD_Email" />
+          <ScalarProperty Name="FLD_Username" ColumnName="FLD_Username" />
+          <ScalarProperty Name="FLD_Password" ColumnName="FLD_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_WeekRep">
+      <EntityTypeMapping TypeName="RightPointModel.TBL_WeekRep">
+        <MappingFragment StoreEntitySet="TBL_WeekRep">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Day" ColumnName="FLD_Day" />
+          <ScalarProperty Name="FLD_Program_FK" ColumnName="FLD_Program_FK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIW_Lottaries">
+      <EntityTypeMapping TypeName="RightPointModel.VIW_Lottaries">
+        <MappingFragment StoreEntitySet="VIW_Lottaries">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Category_FK" ColumnName="FLD_Category_FK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Percent" ColumnName="FLD_Percent" />
+          <ScalarProperty Name="FLD_Category" ColumnName="FLD_Category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIW_Profiles">
+      <EntityTypeMapping TypeName="RightPointModel.VIW_Profiles">
+        <MappingFragment StoreEntitySet="VIW_Profiles">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Access" ColumnName="FLD_Access" />
+          <ScalarProperty Name="FLD_ForeName" ColumnName="FLD_ForeName" />
+          <ScalarProperty Name="FLD_Surname" ColumnName="FLD_Surname" />
+          <ScalarProperty Name="FLD_Gender" ColumnName="FLD_Gender" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Email" ColumnName="FLD_Email" />
+          <ScalarProperty Name="FLD_Username" ColumnName="FLD_Username" />
+          <ScalarProperty Name="FLD_Password" ColumnName="FLD_Password" />
+          <ScalarProperty Name="FLD_Education" ColumnName="FLD_Education" />
+          <ScalarProperty Name="FLD_Ages" ColumnName="FLD_Ages" />
+          <ScalarProperty Name="FLD_Occupation" ColumnName="FLD_Occupation" />
+          <ScalarProperty Name="FLD_FamilyIncome" ColumnName="FLD_FamilyIncome" />
+          <ScalarProperty Name="FLD_Cooperation" ColumnName="FLD_Cooperation" />
+          <ScalarProperty Name="FLD_CAccess" ColumnName="FLD_CAccess" />
+          <ScalarProperty Name="FLD_ResponderAddress" ColumnName="FLD_ResponderAddress" />
+          <ScalarProperty Name="FLD_ResponderTel" ColumnName="FLD_ResponderTel" />
+          <ScalarProperty Name="FLD_ResponderEmail" ColumnName="FLD_ResponderEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIW_Programs">
+      <EntityTypeMapping TypeName="RightPointModel.VIW_Programs">
+        <MappingFragment StoreEntitySet="VIW_Programs">
+          <ScalarProperty Name="FLD_ID_PK" ColumnName="FLD_ID_PK" />
+          <ScalarProperty Name="FLD_Title" ColumnName="FLD_Title" />
+          <ScalarProperty Name="FLD_Class_FK" ColumnName="FLD_Class_FK" />
+          <ScalarProperty Name="FLD_Channel_FK" ColumnName="FLD_Channel_FK" />
+          <ScalarProperty Name="FLD_StartTime" ColumnName="FLD_StartTime" />
+          <ScalarProperty Name="FLD_EndTime" ColumnName="FLD_EndTime" />
+          <ScalarProperty Name="FLD_Enable" ColumnName="FLD_Enable" />
+          <ScalarProperty Name="FLD_Before" ColumnName="FLD_Before" />
+          <ScalarProperty Name="FLD_Middle" ColumnName="FLD_Middle" />
+          <ScalarProperty Name="FLD_After" ColumnName="FLD_After" />
+          <ScalarProperty Name="FLD_Channel" ColumnName="FLD_Channel" />
+          <ScalarProperty Name="FLD_Media" ColumnName="FLD_Media" />
+          <ScalarProperty Name="FLD_Broadcast" ColumnName="FLD_Broadcast" />
+          <ScalarProperty Name="FLD_ClassNo" ColumnName="FLD_ClassNo" />
+          <ScalarProperty Name="FLD_PPS" ColumnName="FLD_PPS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

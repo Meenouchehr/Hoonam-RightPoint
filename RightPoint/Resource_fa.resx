@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACC" xml:space="preserve">
+    <value>کد پخش</value>
+  </data>
+  <data name="Access" xml:space="preserve">
+    <value>دسترسی</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>افزودن</value>
+  </data>
+  <data name="After" xml:space="preserve">
+    <value>بعد</value>
+  </data>
+  <data name="Ages" xml:space="preserve">
+    <value>گروه های سنی</value>
+  </data>
+  <data name="AMD" xml:space="preserve">
+    <value>AMD</value>
+  </data>
+  <data name="Before" xml:space="preserve">
+    <value>قبل</value>
+  </data>
+  <data name="Broadcast" xml:space="preserve">
+    <value>پخش</value>
+  </data>
+  <data name="Budget" xml:space="preserve">
+    <value>بودجه</value>
+  </data>
+  <data name="Campaign" xml:space="preserve">
+    <value>کمپین</value>
+  </data>
+  <data name="Cell" xml:space="preserve">
+    <value>تلفن همراه</value>
+  </data>
+  <data name="Channel" xml:space="preserve">
+    <value>کانال</value>
+  </data>
+  <data name="ChannelName" xml:space="preserve">
+    <value>نام کانال</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>طبقه</value>
+  </data>
+  <data name="ClipTime" xml:space="preserve">
+    <value>زمان کلیپ</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>کد</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>شرکت</value>
+  </data>
+  <data name="ContextType" xml:space="preserve">
+    <value>نوع محتوا</value>
+  </data>
+  <data name="DataRange" xml:space="preserve">
+    <value>بازه های اطلاعاتی</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="DisableDate" xml:space="preserve">
+    <value>تاریخ غیر فعال شدن</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>ویرایش</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>تحصیلات</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>رایانامه</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>تاریخ پایان</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>ساعت پایان</value>
+  </data>
+  <data name="ExteraPlay" xml:space="preserve">
+    <value>اضافه پخش</value>
+  </data>
+  <data name="Extra" xml:space="preserve">
+    <value>اضافه</value>
+  </data>
+  <data name="ExtraType" xml:space="preserve">
+    <value>نوع اضافه</value>
+  </data>
+  <data name="FamilyIncome" xml:space="preserve">
+    <value>درآمدهای خانوادگی</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>جنسیت</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>گروه</value>
+  </data>
+  <data name="GroupID" xml:space="preserve">
+    <value> گروه</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>نام گروه</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>شناسه کاربری</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>تصویر</value>
+  </data>
+  <data name="ImageAlt" xml:space="preserve">
+    <value>جایگزین تصویر</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>شاخص</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>فعال شده</value>
+  </data>
+  <data name="IsChecked" xml:space="preserve">
+    <value>بررسی شده</value>
+  </data>
+  <data name="IsDelete" xml:space="preserve">
+    <value>حذف شده</value>
+  </data>
+  <data name="IsEnabled" xml:space="preserve">
+    <value>فعال شده</value>
+  </data>
+  <data name="IsPublish" xml:space="preserve">
+    <value>منتشر شده</value>
+  </data>
+  <data name="IsSelected" xml:space="preserve">
+    <value>انتخاب شده</value>
+  </data>
+  <data name="Limit" xml:space="preserve">
+    <value>محدودیت</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>مکان در برنامه</value>
+  </data>
+  <data name="Lottary" xml:space="preserve">
+    <value>قرعه</value>
+  </data>
+  <data name="MaritalStatus" xml:space="preserve">
+    <value>وضعیت تاهل</value>
+  </data>
+  <data name="Media" xml:space="preserve">
+    <value>رسانه</value>
+  </data>
+  <data name="Middle" xml:space="preserve">
+    <value>میان</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>جدید</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>شماره</value>
+  </data>
+  <data name="Occupation" xml:space="preserve">
+    <value>گروه های شغلی</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>عملیات</value>
+  </data>
+  <data name="PassPercent" xml:space="preserve">
+    <value>PassPercent</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>گذرواژه</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>تلفن</value>
+  </data>
+  <data name="PlayTime" xml:space="preserve">
+    <value>زمان نمایش</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>مکان در باکس</value>
+  </data>
+  <data name="Province" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="Questionaire" xml:space="preserve">
+    <value>نظرسنجی</value>
+  </data>
+  <data name="Rep" xml:space="preserve">
+    <value>تکرار</value>
+  </data>
+  <data name="RePassword" xml:space="preserve">
+    <value>تکرار گذرواژه</value>
+  </data>
+  <data name="ResponderName" xml:space="preserve">
+    <value> مصاحبه شونده</value>
+  </data>
+  <data name="RunCount" xml:space="preserve">
+    <value>RunCount</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>ثبت</value>
+  </data>
+  <data name="Series" xml:space="preserve">
+    <value>سری</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>تاریخ شروع</value>
+  </data>
+  <data name="StartTime" xml:space="preserve">
+    <value>ساعت شروع</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Tel" xml:space="preserve">
+    <value>تلفن</value>
+  </data>
+  <data name="TimeRange" xml:space="preserve">
+    <value>دوره های زمانی</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>به روز رسانی</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>کاربر</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>شناسه کاربری</value>
+  </data>
+  <data name="WeekRep" xml:space="preserve">
+    <value>تکرار در هفته</value>
+  </data>
+  <data name="Above4000000" xml:space="preserve">
+    <value>بالای ۴ میلیون</value>
+  </data>
+  <data name="Above60" xml:space="preserve">
+    <value>بالای ۶۰ سال</value>
+  </data>
+  <data name="AD" xml:space="preserve">
+    <value>فوق دیپلم</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>ادمین</value>
+  </data>
+  <data name="Bachelor" xml:space="preserve">
+    <value>کارشناسی</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>مشتری</value>
+  </data>
+  <data name="Diploma" xml:space="preserve">
+    <value>دیپلم</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>کارمند</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>زن</value>
+  </data>
+  <data name="Four" xml:space="preserve">
+    <value>چهار هفته</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>آزاد</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>جمعه</value>
+  </data>
+  <data name="Half" xml:space="preserve">
+    <value>نصف</value>
+  </data>
+  <data name="Housewife" xml:space="preserve">
+    <value>خانه‌دار</value>
+  </data>
+  <data name="International" xml:space="preserve">
+    <value>برون مرزی</value>
+  </data>
+  <data name="Labor" xml:space="preserve">
+    <value>کارگر</value>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>داخلی</value>
+  </data>
+  <data name="MAandAbove" xml:space="preserve">
+    <value>کارشناسی ارشد و بالاتر</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>مرد</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>مدیر</value>
+  </data>
+  <data name="Maried" xml:space="preserve">
+    <value>متأهل</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>دوشنبه</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>انتخاب نشده</value>
+  </data>
+  <data name="One" xml:space="preserve">
+    <value>یک هفته</value>
+  </data>
+  <data name="OneFifth" xml:space="preserve">
+    <value>یک پنجم</value>
+  </data>
+  <data name="OneThird" xml:space="preserve">
+    <value>یک سوم</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>سایر</value>
+  </data>
+  <data name="Quarter" xml:space="preserve">
+    <value>یک چهارم</value>
+  </data>
+  <data name="Radio" xml:space="preserve">
+    <value>رادیویی</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>شنبه</value>
+  </data>
+  <data name="Single" xml:space="preserve">
+    <value>مجرد</value>
+  </data>
+  <data name="SomeTimes" xml:space="preserve">
+    <value>گاهی اوقات</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>دانشجو</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>یکشنبه</value>
+  </data>
+  <data name="Three" xml:space="preserve">
+    <value>سه هفته</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>پنج‌شنبه</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>کامل</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>سه‌شنبه</value>
+  </data>
+  <data name="TV" xml:space="preserve">
+    <value>تلویزیونی</value>
+  </data>
+  <data name="Two" xml:space="preserve">
+    <value>دو هفته</value>
+  </data>
+  <data name="Under1000000" xml:space="preserve">
+    <value>۸۰۰ - ۱ میلیون</value>
+  </data>
+  <data name="Under20" xml:space="preserve">
+    <value>زیر ۲۰ سال</value>
+  </data>
+  <data name="Under2000000" xml:space="preserve">
+    <value>۱میلیون - ۲میلیون</value>
+  </data>
+  <data name="Under30" xml:space="preserve">
+    <value>۲۰ - ۲۹ سال</value>
+  </data>
+  <data name="Under3000000" xml:space="preserve">
+    <value>۲میلیون - ۳میلیون</value>
+  </data>
+  <data name="Under40" xml:space="preserve">
+    <value>۳۰-۳۹ سال</value>
+  </data>
+  <data name="Under4000000" xml:space="preserve">
+    <value>۳میلیون- ۴میلیون</value>
+  </data>
+  <data name="Under50" xml:space="preserve">
+    <value>۴۰ - ۴۹ سال</value>
+  </data>
+  <data name="Under60" xml:space="preserve">
+    <value>۵۰- ۵۹ سال</value>
+  </data>
+  <data name="Under600000" xml:space="preserve">
+    <value>زیر ۶۰۰ هزار</value>
+  </data>
+  <data name="Under800000" xml:space="preserve">
+    <value>۶۰۰-۸۰۰</value>
+  </data>
+  <data name="UnderDiploma" xml:space="preserve">
+    <value>زیر دیپلم</value>
+  </data>
+  <data name="Unemployed" xml:space="preserve">
+    <value>بی‌کار</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>چهارشنبه</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>بله</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ورود</value>
+  </data>
+  <data name="AdvertisementTimeTable" xml:space="preserve">
+    <value>جدول زمانبندی پخش آگهی</value>
+  </data>
+  <data name="ArrangeInfo" xml:space="preserve">
+    <value>ورود اطلاعات چیدمان</value>
+  </data>
+  <data name="Atr" xml:space="preserve">
+    <value>مبلغ به ریال</value>
+  </data>
+  <data name="CommunityTargetFeatures" xml:space="preserve">
+    <value>انتخاب ویژگیهای جامعه هدف</value>
+  </data>
+  <data name="ContractInfo" xml:space="preserve">
+    <value>اطلاعات قرارداد</value>
+  </data>
+  <data name="Fawd" xml:space="preserve">
+    <value>مبلغ نهایی با تخفیف</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>ماه پخش</value>
+  </data>
+  <data name="NextStep" xml:space="preserve">
+    <value>مرحله بعد</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>تعداد</value>
+  </data>
+  <data name="Programname" xml:space="preserve">
+    <value>نام برنامه</value>
+  </data>
+  <data name="RatePoint" xml:space="preserve">
+    <value>Rate Point</value>
+  </data>
+  <data name="Recount" xml:space="preserve">
+    <value>محاسبه مجدد</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="SystemAppsSelected" xml:space="preserve">
+    <value>برنامه های انتخابی سیستم</value>
+  </data>
+  <data name="SystemSuggestions" xml:space="preserve">
+    <value>برنامه های پیشنهادی سیستم</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>زمان</value>
+  </data>
+  <data name="UserAppsRemoved" xml:space="preserve">
+    <value>برنامه های حذف شده توسط کاربر</value>
+  </data>
+  <data name="UserAppsSelected" xml:space="preserve">
+    <value>برنامه های انتخاب شده توسط کاربر</value>
+  </data>
+  <data name="Difference" xml:space="preserve">
+    <value>تفاوت</value>
+  </data>
+  <data name="ExtraList" xml:space="preserve">
+    <value>لیست اضافه</value>
+  </data>
+  <data name="GRP" xml:space="preserve">
+    <value>GRP</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>برگشت</value>
+  </data>
+  <data name="Sum" xml:space="preserve">
+    <value>جمع</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>بستن</value>
+  </data>
+  <data name="ElementryInfo" xml:space="preserve">
+    <value>اطلاعات پایه</value>
+  </data>
+  <data name="NoPublish" xml:space="preserve">
+    <value>عدم انتشار</value>
+  </data>
+  <data name="Publish" xml:space="preserve">
+    <value>انتشار</value>
+  </data>
+  <data name="SaveClose" xml:space="preserve">
+    <value>ثبت و بستن</value>
+  </data>
+  <data name="SaveNew" xml:space="preserve">
+    <value>ثبت و جدید</value>
+  </data>
+  <data name="ShowAll" xml:space="preserve">
+    <value>نمایش همه</value>
+  </data>
+  <data name="ShowNoPublish" xml:space="preserve">
+    <value>نمایش عدم انتشار</value>
+  </data>
+  <data name="ShowPublished" xml:space="preserve">
+    <value>نمایش منتشر شده ها</value>
+  </data>
+  <data name="UserList" xml:space="preserve">
+    <value>لیست کاربران</value>
+  </data>
+  <data name="UserSaveEdit" xml:space="preserve">
+    <value>کاربر ثبت / ویرایش</value>
+  </data>
+  <data name="Chart" xml:space="preserve">
+    <value>نمودار</value>
+  </data>
+  <data name="QuestionaireList" xml:space="preserve">
+    <value>لیست فرمهای نظر سنجی</value>
+  </data>
+  <data name="QuestionaireNo" xml:space="preserve">
+    <value>تعداد پاسخ نامه</value>
+  </data>
+  <data name="QuestionaireSaveNew" xml:space="preserve">
+    <value> فرم نظرسنجی ثبت / کاربر</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>آمار</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>درباره ما</value>
+  </data>
+  <data name="Arrange" xml:space="preserve">
+    <value>چیدمان</value>
+  </data>
+  <data name="ArrangeReturn" xml:space="preserve">
+    <value>بازگشت به چیدمان</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>مشکلی بوجود آمده است مجددا اقدام کنید و در صورت برطرف نشدن با پشتیبان تماس بگیرید</value>
+  </data>
+  <data name="CampaignList" xml:space="preserve">
+    <value>لیست کمپین های تبلیغاتی</value>
+  </data>
+  <data name="CampaignManagment" xml:space="preserve">
+    <value>مدیریت کمپین</value>
+  </data>
+  <data name="CampaignNameNotEnter" xml:space="preserve">
+    <value>عنوان کمپین وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="CampaignSaveEdit" xml:space="preserve">
+    <value>کمپین ثبت / ویرایش</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>تغییر</value>
+  </data>
+  <data name="ChannelList" xml:space="preserve">
+    <value>لیست کانال ها</value>
+  </data>
+  <data name="ChannelLogo" xml:space="preserve">
+    <value>کانال لوگو</value>
+  </data>
+  <data name="ChannelManagment" xml:space="preserve">
+    <value>مدیریت کانال ها</value>
+  </data>
+  <data name="ChannelNameNotEnter" xml:space="preserve">
+    <value>عنوان کانال وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="ChannelSaveEdit" xml:space="preserve">
+    <value>کانال ثبت / ویرایش</value>
+  </data>
+  <data name="CompanyList" xml:space="preserve">
+    <value>لیست شرکت ها</value>
+  </data>
+  <data name="CompanyManagment" xml:space="preserve">
+    <value>مدیریت شرکت ها</value>
+  </data>
+  <data name="CompanyNameNotEnter" xml:space="preserve">
+    <value>عنوان شرکت وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="CompanySaveEdit" xml:space="preserve">
+    <value>شرکت ثبت / ویرایش</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطا</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="Fault" xml:space="preserve">
+    <value>اشتباه</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>پرونده</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>عمومی</value>
+  </data>
+  <data name="Global" xml:space="preserve">
+    <value>سراسری</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>راهنما</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>صفحه اول</value>
+  </data>
+  <data name="Icon" xml:space="preserve">
+    <value>نمایش ایکن</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>زبان</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>پیام</value>
+  </data>
+  <data name="PasswordError" xml:space="preserve">
+    <value>گذرواژه و تکرار آن برابر نیست دوباره تلاش کنید</value>
+  </data>
+  <data name="Password_NotEnter" xml:space="preserve">
+    <value>گذرواژه وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>مسیر</value>
+  </data>
+  <data name="ProgramList" xml:space="preserve">
+    <value>لیست برنامه های صدا و سیما</value>
+  </data>
+  <data name="ProgramManagment" xml:space="preserve">
+    <value>مدیریت برنامه‌ها</value>
+  </data>
+  <data name="ProgramNameNotEnter" xml:space="preserve">
+    <value>نام برنامه وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="ProgramSaveEdit" xml:space="preserve">
+    <value>برنامه های صدا و سیما ثبت / ویرایش</value>
+  </data>
+  <data name="QCodeError" xml:space="preserve">
+    <value>کد پرسشنامه وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="QTitleError" xml:space="preserve">
+    <value>عنوان پرسشنامه وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="QuestionnaireManagment" xml:space="preserve">
+    <value>مدیریت پرسشنامه‌ها</value>
+  </data>
+  <data name="RePassword_NotEnter" xml:space="preserve">
+    <value>تکرار گذرواژه وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="RespondentManager" xml:space="preserve">
+    <value>مدیریت پاسخنامه‌ها</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>انتخاب</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="StartTimeNotEnter" xml:space="preserve">
+    <value>تاریخ شروع برنامه وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>موفقیت</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>بارگذاری</value>
+  </data>
+  <data name="UserManagment" xml:space="preserve">
+    <value>مدیریت کاربران</value>
+  </data>
+  <data name="UserNameNotEnter" xml:space="preserve">
+    <value>نام کاربر وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="Username_NotEnter" xml:space="preserve">
+    <value>شناسه کاربری وارد نشده است دوباره تلاش کنید</value>
+  </data>
+  <data name="UserNotExist" xml:space="preserve">
+    <value>کاربر وجود ندارد</value>
+  </data>
+  <data name="UserPannel" xml:space="preserve">
+    <value>پنل کاربری</value>
+  </data>
+  <data name="UserRecognize" xml:space="preserve">
+    <value>کاربر شناخته شد</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>هشدار</value>
+  </data>
+  <data name="OverLap" xml:space="preserve">
+    <value>برنامه های دارای همپوشانی مخاطب حذف گردد</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>انگلیسی</value>
+  </data>
+  <data name="Persian" xml:space="preserve">
+    <value>فارسی</value>
+  </data>
+  <data name="BudgetTooltip" xml:space="preserve">
+    <value>بودجه ی مورد نظر خود؛  برای این کمپین را بر حسب ریال وارد نمایید</value>
+  </data>
+  <data name="CampaignTooltip" xml:space="preserve">
+    <value>در این قسمت از میان کمپین های مربوط به شرکت، کمپین مورد نظر خود را انتخاب نمایید</value>
+  </data>
+  <data name="ChannelTooltip" xml:space="preserve">
+    <value>از بین کانال های موجود، کانال هایی که علاقه مندید آگهی شما در آنها پخش شود را مشخص نمایید</value>
+  </data>
+  <data name="ClipTimeTooltip" xml:space="preserve">
+    <value>مدت زمان پخش آگهی خود را بر حسب ثانیه وارد نمایید</value>
+  </data>
+  <data name="CommunityTargetFeaturesTooltip" xml:space="preserve">
+    <value>در قسمت انتخاب ویژگیهای جامعه هدف، با گزینه های تعبیه شده، جامعه ی هدف خود را مشخص نموده تا برنامه بتواند بر اساس نظرات و سلایق آنها برنامه های مناسب جهت پخش آگهی شما را پیدا و معرفی کند.</value>
+  </data>
+  <data name="ContextTypeTooltip" xml:space="preserve">
+    <value>نوع محتوای آگهی تبلیغاتی خود را مشخص نمایید.</value>
+  </data>
+  <data name="DataRangeTooltip" xml:space="preserve">
+    <value>منظور؛ ترتیب نزولی برنامه هایی ست که سیستم بر اساس Rate Point   آنها از زیاد به کم نشان می دهد؛ اگر در گستره برنامه ؛ نصف را انتخاب نمایید ؛ نصف برنامه های سیستم از بالا به پایین برای چیدمان در نظر گرفته می شود.به همین ترتیب سایر گزینه های گستره برنامه</value>
+  </data>
+  <data name="ExteraPlayTooltip" xml:space="preserve">
+    <value>عدد مربوط درصد اضافه پخش خود را وارد نمایید ( بدون علامت درصد )</value>
+  </data>
+  <data name="LocationTooltip" xml:space="preserve">
+    <value>اگر تمایل دارید آگهی شما در محل خاصی (قبل، میان و یا انتهای برنامه) پخش گردد در این قسمت آن را انتخاب نمایید. (مکان در برنامه پس از نمایش برنامه های پیشنهادی نیز قابل تغییر می باشد)</value>
+  </data>
+  <data name="MediaTooltip" xml:space="preserve">
+    <value>از بین تلویزیون و رادیو؛ رسانه مد نظر خود برای این کمپین را انتخاب نمایید.</value>
+  </data>
+  <data name="OverLapTooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PositionTooltip" xml:space="preserve">
+    <value>ترتیب اولویت پخش آگهی خود در باکس آگهی پخش را از لیست انتخاب نمایید. (این گزینه نیز پس از نمایش برنامه های پیشنهادی قابل تغییر می باشد)</value>
+  </data>
+  <data name="RepTooltip" xml:space="preserve">
+    <value>تعداد تکرار برنامه ها را در این قسمت وارد کنید؛ عدد صفر نشانه نامحدود بودن تعداد تکرارهر برنامه است. و وارد کردن هر عدد دیگری ؛ تعداد تکرار برای هر برنامه را به آن عدد محدود می کند.</value>
+  </data>
+  <data name="TimeRangeTooltip" xml:space="preserve">
+    <value>منظور تعداد هفته های پیش روست؛  که شما چیدمان را بر اساس برنامه های آن انتخاب می نمایید.</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>به سیستم Right Point خوش آمدید</value>
+  </data>
+  <data name="Welcome2" xml:space="preserve">
+    <value>هدف از طراحی این برنامه؛  دست یابی به بهینه ترین حالت پخش با کمترین هزینه و اثربخش ترین حالت  ممکن  ؛  می باشد.</value>
+  </data>
+  <data name="CreateDate" xml:space="preserve">
+    <value>تاریخ ساخت</value>
+  </data>
+  <data name="IsDeleted" xml:space="preserve">
+    <value>IsDeleted</value>
+  </data>
+  <data name="Agreement" xml:space="preserve">
+    <value>موافقم</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>صرفه نظر</value>
+  </data>
+  <data name="EnglishTitle" xml:space="preserve">
+    <value>عنوان انگلیسی</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>شهر</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>همه</value>
+  </data>
+  <data name="ReportDate" xml:space="preserve">
+    <value>تاریخ گزارش</value>
+  </data>
+  <data name="Reporter" xml:space="preserve">
+    <value>گزارش گیرنده</value>
+  </data>
+  <data name="Rial" xml:space="preserve">
+    <value>ریال</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>ثانیه</value>
+  </data>
+  <data name="Title1" xml:space="preserve">
+    <value>گزارش نهایی تهیه شده توسط سیستم Right Point</value>
+  </data>
+  <data name="Title2" xml:space="preserve">
+    <value>هدف از طراحی این برنامه؛  دست یابی به بهینه ترین حالت پخش با کمترین هزینه و اثربخش ترین حالت  ممکن  ؛  می باشد.</value>
+  </data>
+  <data name="Title3" xml:space="preserve">
+    <value>اطلاعات تکمیلی درخصوص شرکت و نوع کمپین تبلیغاتی</value>
+  </data>
+  <data name="Title4" xml:space="preserve">
+    <value>میزان تماشای برنامه های تلویزیونی توسط گروه هدف</value>
+  </data>
+  <data name="Title5" xml:space="preserve">
+    <value>جدول برنامه های پیشنهادی</value>
+  </data>
+  <data name="Foretaste" xml:space="preserve">
+    <value>پیش نمایش</value>
+  </data>
+  <data name="EnglishImage" xml:space="preserve">
+    <value>تصویر انگلیسی</value>
+  </data>
+  <data name="Noo" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+</root>

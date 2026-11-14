@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA6D565B-16ED-4ACF-9307-942C85AB8710}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RPC</RootNamespace>
+    <AssemblyName>RPC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACC.cs" />
+    <Compile Include="AMD.cs" />
+    <Compile Include="Answer.cs" />
+    <Compile Include="Authorize.cs" />
+    <Compile Include="Campaign.cs" />
+    <Compile Include="CampaignAccess.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Channel.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Class.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="ContextType.cs" />
+    <Compile Include="Contract.cs" />
+    <Compile Include="ContractAccess.cs" />
+    <Compile Include="ContractProgram.cs" />
+    <Compile Include="Emails.cs" />
+    <Compile Include="General.cs" />
+    <Compile Include="Foretaste.cs" />
+    <Compile Include="Kernel.cs" />
+    <Compile Include="LCategory.cs" />
+    <Compile Include="Limit.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Lottary.cs" />
+    <Compile Include="Media.cs" />
+    <Compile Include="OwnerGroup.cs" />
+    <Compile Include="PAL.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="Profile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramAccess.cs" />
+    <Compile Include="ProgramSeries.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Province.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="Questionnaire.cs" />
+    <Compile Include="RC.cs" />
+    <Compile Include="Respondent.cs" />
+    <Compile Include="Responder.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="WeekRep.cs" />
+    <Compile Include="WeekReps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Generic\Generic.csproj">
+      <Project>{0ac3f55c-8dbb-438e-9ad6-f8f1b63463e2}</Project>
+      <Name>Generic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

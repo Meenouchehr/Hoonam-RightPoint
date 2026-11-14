@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5a16b6506d224ca0ba90168326f87145" Name="Diagram1">
+        <EntityTypeShape EntityType="RightPointModel.TBL_ACC" Width="1.5" PointX="3" PointY="15" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_AMD" Width="1.5" PointX="3" PointY="38.25" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Answer" Width="1.5" PointX="13.5" PointY="24.375" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Campaign" Width="1.5" PointX="5.25" PointY="14" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_CampaignAccess" Width="1.5" PointX="7.5" PointY="15.375" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Category" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Channel" Width="1.5" PointX="6" PointY="24" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_City" Width="1.5" PointX="6.75" PointY="40.625" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Class" Width="1.5" PointX="3" PointY="20.125" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Company" Width="1.5" PointX="3" PointY="5.5" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_ContextType" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Contract" Width="1.5" PointX="0.75" PointY="16.375" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_ContractAccess" Width="1.5" PointX="8.25" PointY="19.375" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_ContractMD" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Foretaste" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_LCategory" Width="1.5" PointX="3.75" PointY="30.625" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Limit" Width="1.5" PointX="10.5" PointY="33.375" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Location" Width="1.5" PointX="3" PointY="25.625" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Lottary" Width="1.5" PointX="6" PointY="20" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Media" Width="1.5" PointX="0.75" PointY="19.875" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_OwnerGroup" Width="1.5" PointX="0.75" PointY="7.25" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Position" Width="1.5" PointX="3" PointY="35.125" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Profile" Width="1.5" PointX="0.75" PointY="4.125" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Program" Width="1.5" PointX="8.25" PointY="23.125" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_ProgramAccess" Width="1.5" PointX="10.5" PointY="22.625" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_ProgramSeries" Width="1.5" PointX="8.25" PointY="29.5" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Province" Width="1.5" PointX="3.75" PointY="41.5" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Question" Width="1.5" PointX="10.5" PointY="27.5" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Questionnaire" Width="1.5" PointX="3" PointY="10.625" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Respondent" Width="1.5" PointX="11.25" PointY="38.875" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Responder" Width="1.5" PointX="9" PointY="39.875" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_User" Width="1.5" PointX="5.25" PointY="8.375" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_WeekRep" Width="1.5" PointX="10.5" PointY="36.125" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_Answer" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_AutorizeList" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_Campaign" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_CampaignAccess" Width="1.5" PointX="11.75" PointY="7.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_Company" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_ContractProgram" Width="1.5" PointX="13.75" PointY="4.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_Contracts" Width="1.5" PointX="9.75" PointY="13.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_Lottary" Width="1.5" PointX="13.75" PointY="10.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_Profile" Width="1.5" PointX="11.75" PointY="14.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_Program" Width="1.5" PointX="13.75" PointY="14.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_ProgramAccess" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_Question" Width="1.5" PointX="15.75" PointY="6.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_Respondent" Width="1.5" PointX="15.75" PointY="12.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_User" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RightPointModel.VIW_WeekReps" Width="1.5" PointX="17.75" PointY="5.75" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ACC_TBL_Media" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ACC_TBL_Media1" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Campaign_TBL_ACC" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_AMD_TBL_Media" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_RESP" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Answer_TBL_Program" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Campaign_TBL_Company" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Campaign_TBL_Lottary" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Campaign_TBL_Questionnaire" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_CampaignAccess_TBL_Campaign" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_CampaignAccess_TBL_User" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Channel_TBL_Media" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Channel_TBL_Province" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CHAN" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Responder_TBL_City" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Class_TBL_Contract" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Class_TBL_Media" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CLAS" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ProgramAccess_TBL_Class" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Company_TBL_OwnerGroup" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Company_TBL_Profile" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_User_TBL_Company" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CONT" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ContractMD_TBL_Contract" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_LOTT_REFERENCE_TBL_LCAT" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_LIMI_REFERENCE_TBL_PROG" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Location_TBL_Media" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ProgramAccess_TBL_Location" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Lottary_TBL_Media" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Position_TBL_Media" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ProgramAccess_TBL_OwnerGroup" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_User_TBL_Profile" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Program_TBL_Program" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ProgramAccess_TBL_Program" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Question_TBL_Program" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_WEEK_REFERENCE_TBL_PROG" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ProgramAccess_TBL_ProgramSeries" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_QUES" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Respondent_TBL_Questionnaire" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_Respondent_TBL_Responder" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

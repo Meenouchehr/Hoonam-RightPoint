@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="67b218a9299643f490f74a8eb44715b9" Name="Diagram1">
+        <EntityTypeShape EntityType="RightPointModel.TBL_ACC" Width="1.5" PointX="9.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Addresses" Width="1.5" PointX="7.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_AMD" Width="1.5" PointX="11.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Answer" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Category" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Channel" Width="1.5" PointX="12.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Class" Width="1.5" PointX="9.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Contract" Width="1.5" PointX="9.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_ContractAccess" Width="1.5" PointX="12" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Descriptive" Width="1.5" PointX="7.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Emails" Width="1.5" PointX="7.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_LCategory" Width="1.5" PointX="9.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Limit" Width="1.5" PointX="17.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Lottary" Width="1.5" PointX="12" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Names" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Optional" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_OwnerGroup" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Position" Width="1.5" PointX="13.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Profile" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Program" Width="1.5" PointX="15" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_QEOptional" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_QExtra" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_QPOptional" Width="1.5" PointX="7.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_QProgram" Width="1.5" PointX="5.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Question" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Questionnaire" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_RC" Width="1.5" PointX="5.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Respondent" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Responder" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Tels" Width="1.5" PointX="7.5" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_Titles" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_User" Width="1.5" PointX="3" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RightPointModel.TBL_WeekRep" Width="1.5" PointX="17.25" PointY="6.375" IsExpanded="true" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ADDR_REFERENCE_TBL_RC" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_QUES" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_ANSW_REFERENCE_TBL_RESP" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_DESC_REFERENCE_TBL_ANSW" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_OPTI_REFERENCE_TBL_ANSW" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_CATE" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CHAN" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CLAS" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_PROG_REFERENCE_TBL_CLAS" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_CONT_REFERENCE_TBL_CONT" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_EMAI_REFERENCE_TBL_RC" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_LOTT_REFERENCE_TBL_LCAT" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_LIMI_REFERENCE_TBL_PROG" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_NAME_REFERENCE_TBL_PROF" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF2" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_PROF3" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_TITL_REFERENCE_TBL_PROF" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_USER_REFERENCE_TBL_PROF" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_WEEK_REFERENCE_TBL_PROG" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_QEOP_REFERENCE_TBL_QEXT" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_QEXT_REFERENCE_TBL_QUES" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_QPOP_REFERENCE_TBL_QPRO" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_QPRO_REFERENCE_TBL_QUES" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_QUES_REFERENCE_TBL_QUES" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_RESP_REFERENCE_TBL_QUES" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_RC_REFERENCE_TBL_RESP" ManuallyRouted="false" />
+        <AssociationConnector Association="RightPointModel.FK_TBL_TELS_REFERENCE_TBL_RC" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

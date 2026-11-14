@@ -1,0 +1,1768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RightPointModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_ACC">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Redundant" Type="float" />
+    <Property Name="FLD_Type" Type="tinyint" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_AMD">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Month" Type="tinyint" />
+    <Property Name="FLD_Year" Type="tinyint" />
+    <Property Name="FLD_Redundant" Type="float" />
+    <Property Name="FLD_Type" Type="tinyint" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_Answer">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Respondent_FK" Type="bigint" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+    <Property Name="FLD_Option" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_Campaign">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Company_FK" Type="bigint" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Comment" Type="nvarchar(max)" />
+    <Property Name="FLD_EnglishComment" Type="nvarchar(max)" />
+    <Property Name="FLD_IsActive" Type="bit" />
+    <Property Name="FLD_StartDate" Type="datetime" />
+    <Property Name="FLD_EndDate" Type="datetime" />
+    <Property Name="FLD_ACC_FK" Type="bigint" />
+    <Property Name="FLD_Lottary_FK" Type="bigint" />
+    <Property Name="FLD_Questionnaire_FK" Type="bigint" />
+    <Property Name="FLD_TimeRange" Type="tinyint" />
+    <Property Name="FLD_Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_CampaignAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Campaign_FK" Type="bigint" />
+    <Property Name="FLD_User_FK" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_Category">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Tab" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_Channel">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+    <Property Name="FLD_Province_FK" Type="bigint" />
+    <Property Name="FLD_Broadcast" Type="tinyint" />
+    <Property Name="FLD_Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_City">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_Class">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_ClassNo" Type="int" />
+    <Property Name="FLD_PPS" Type="float" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+    <Property Name="FLD_Contract_FK" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_Company">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Group_FK" Type="bigint" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Image" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TBL_ContextType">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_Contract">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Commnet" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_ContractAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_ContractID_FK" Type="bigint" />
+    <Property Name="FLD_ClassID_FK" Type="bigint" />
+    <Property Name="FLD_Access" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_ContractMD">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_ContractID_FK" Type="bigint" />
+    <Property Name="FLD_Month" Type="tinyint" />
+    <Property Name="FLD_Redundant" Type="float" />
+    <Property Name="FLD_Type" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_Foretaste">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Image" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_EnglishImage" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TBL_LCategory">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_Limit">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Date" Type="date" />
+    <Property Name="FLD_Day" Type="tinyint" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_Location">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="20" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="20" />
+    <Property Name="FLD_Loc" Type="tinyint" />
+    <Property Name="FLD_Redundant" Type="float" />
+    <Property Name="FLD_Type" Type="tinyint" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+    <Property Name="FLD_After" Type="bit" />
+    <Property Name="FLD_Middle" Type="bit" />
+    <Property Name="FLD_Before" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_Lottary">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Category_FK" Type="bigint" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Redundant" Type="float" />
+    <Property Name="FLD_Type" Type="tinyint" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_Media">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_OwnerGroup">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Commnet" Type="nvarchar(max)" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_EnglishComment" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_Position">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Redundant" Type="float" />
+    <Property Name="FLD_Type" Type="tinyint" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_Profile">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_IsEnabled" Type="bit" />
+    <Property Name="FLD_Email" Type="varchar" MaxLength="100" />
+    <Property Name="FLD_Phone" Type="varchar" MaxLength="15" />
+    <Property Name="FLD_CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_Program">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Channel_FK" Type="bigint" />
+    <Property Name="FLD_StartTime" Type="datetime" />
+    <Property Name="FLD_EndTime" Type="datetime" />
+    <Property Name="FLD_Enable" Type="bit" />
+    <Property Name="FLD_PlayTime" Type="varchar" MaxLength="5" />
+    <Property Name="FLD_Before" Type="bit" />
+    <Property Name="FLD_Middle" Type="bit" />
+    <Property Name="FLD_After" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_ProgramAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+    <Property Name="FLD_Group_FK" Type="bigint" />
+    <Property Name="FLD_Class_FK" Type="bigint" />
+    <Property Name="FLD_Series_FK" Type="bigint" />
+    <Property Name="FLD_Location_FK" Type="bigint" />
+    <Property Name="FLD_Extra" Type="bigint" />
+    <Property Name="FLD_ExtraType" Type="tinyint" />
+    <Property Name="FLD_Month" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_ProgramSeries">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Redundant" Type="float" />
+    <Property Name="FLD_Type" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_Province">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Redundant" Type="float" />
+    <Property Name="FLD_Type" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TBL_Question">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Questionnaire_FK" Type="bigint" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_Questionnaire">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_QNo" Type="varchar" MaxLength="20" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_IsPublish" Type="bit" />
+    <Property Name="FLD_CreatDate" Type="date" />
+  </EntityType>
+  <EntityType Name="TBL_Respondent">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Questionnaire_FK" Type="bigint" />
+    <Property Name="FLD_Responder_FK" Type="bigint" />
+    <Property Name="FLD_Inquirer_FK" Type="bigint" />
+    <Property Name="FLD_BestAdvertising" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_BestCompany" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_BestClass" Type="bigint" />
+    <Property Name="FLD_WorstAdvertising" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_WorstCompany" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_WorstClass" Type="bigint" />
+    <Property Name="FLD_WatchTV" Type="tinyint" />
+    <Property Name="FLD_IsPublish" Type="bit" />
+    <Property Name="FLD_CreateDate" Type="date" />
+    <Property Name="FLD_BestAdvertising2" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_BestCompany2" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_BestClass2" Type="bigint" />
+    <Property Name="FLD_WorstAdvertising2" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_WorstCompany2" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_WorstClass2" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_Responder">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Education" Type="tinyint" />
+    <Property Name="FLD_Ages" Type="tinyint" />
+    <Property Name="FLD_Occupation" Type="tinyint" />
+    <Property Name="FLD_FamilyIncome" Type="tinyint" />
+    <Property Name="FLD_MaritalStatus" Type="tinyint" />
+    <Property Name="FLD_Cooperation" Type="bit" />
+    <Property Name="FLD_Gender" Type="bit" />
+    <Property Name="FLD_City_FK" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_User">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Company_FK" Type="bigint" />
+    <Property Name="FLD_Email" Type="varchar" MaxLength="200" />
+    <Property Name="FLD_Username" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Password" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Gender" Type="bit" />
+    <Property Name="FLD_Cell" Type="varchar" MaxLength="15" />
+    <Property Name="FLD_DisableDate" Type="datetime" />
+    <Property Name="FLD_Access" Type="tinyint" />
+    <Property Name="FLD_LastVisit" Type="datetime" />
+    <Property Name="FLD_FirstVisit" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_WeekRep">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FLD_Day" Type="tinyint" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_Answer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_Answer">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Respondent_FK" Type="bigint" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+    <Property Name="FLD_Option" Type="tinyint" />
+    <Property Name="FLD_QNo" Type="varchar" MaxLength="20" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_IsPublish" Type="bit" />
+    <Property Name="FLD_ResponderName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_ResponderEducation" Type="tinyint" />
+    <Property Name="FLD_ResponderAges" Type="tinyint" />
+    <Property Name="FLD_ResponderOccupation" Type="tinyint" />
+    <Property Name="FLD_ResponderFamilyIncome" Type="tinyint" />
+    <Property Name="FLD_ResponderCooperation" Type="bit" />
+    <Property Name="FLD_ResponderGender" Type="bit" />
+    <Property Name="FLD_InquirerName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_InquirerTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_InquirerGender" Type="bit" />
+    <Property Name="FLD_InquirerCompanyTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_ProgramTitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Before" Type="bit" />
+    <Property Name="FLD_Middle" Type="bit" />
+    <Property Name="FLD_After" Type="bit" />
+    <Property Name="FLD_Questionnaire_FK" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_AutorizeList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_AutorizeList">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_WeekRep" />
+      <PropertyRef Name="FLD_Limit" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Respondent_FK" Type="bigint" />
+    <Property Name="FLD_Option" Type="tinyint" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+    <Property Name="FLD_Responder_FK" Type="bigint" />
+    <Property Name="FLD_ProgramTitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Before" Type="bit" />
+    <Property Name="FLD_Middle" Type="bit" />
+    <Property Name="FLD_After" Type="bit" />
+    <Property Name="FLD_Group_FK" Type="bigint" />
+    <Property Name="FLD_Class_FK" Type="bigint" />
+    <Property Name="FLD_Series_FK" Type="bigint" />
+    <Property Name="FLD_Location_FK" Type="bigint" />
+    <Property Name="FLD_Month" Type="tinyint" />
+    <Property Name="FLD_Extra" Type="bigint" />
+    <Property Name="FLD_ExtraType" Type="tinyint" />
+    <Property Name="FLD_PPS" Type="float" />
+    <Property Name="FLD_ClassNo" Type="int" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+    <Property Name="FLD_MediaTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_LocationTitle" Type="nvarchar" MaxLength="20" />
+    <Property Name="FLD_Loc" Type="tinyint" />
+    <Property Name="FLD_LocationRedundant" Type="float" />
+    <Property Name="FLD_LocationType" Type="tinyint" />
+    <Property Name="FLD_SeriesTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_SeriesRedundant" Type="float" />
+    <Property Name="FLD_SeriesType" Type="tinyint" />
+    <Property Name="FLD_ContactTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Channel_FK" Type="bigint" />
+    <Property Name="FLD_StartTime" Type="datetime" />
+    <Property Name="FLD_EndTime" Type="datetime" />
+    <Property Name="FLD_Enable" Type="bit" />
+    <Property Name="FLD_PlayTime" Type="varchar" MaxLength="5" />
+    <Property Name="FLD_QNo" Type="varchar" MaxLength="20" />
+    <Property Name="FLD_QuestionnaireIsPublish" Type="bit" />
+    <Property Name="FLD_CreatDate" Type="date" />
+    <Property Name="FLD_RespondentIsPublish" Type="bit" />
+    <Property Name="FLD_Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Education" Type="tinyint" />
+    <Property Name="FLD_Ages" Type="tinyint" />
+    <Property Name="FLD_Occupation" Type="tinyint" />
+    <Property Name="FLD_FamilyIncome" Type="tinyint" />
+    <Property Name="FLD_MaritalStatus" Type="tinyint" />
+    <Property Name="FLD_Cooperation" Type="bit" />
+    <Property Name="FLD_Gender" Type="bit" />
+    <Property Name="FLD_ChannelTitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="FLD_Province_FK" Type="bigint" />
+    <Property Name="FLD_Broadcast" Type="tinyint" />
+    <Property Name="FLD_ProvinceTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_ProvinceType" Type="tinyint" />
+    <Property Name="FLD_ProvinceRedundant" Type="float" />
+    <Property Name="FLD_Questionnaire_FK" Type="bigint" />
+    <Property Name="FLD_WeekRep" Type="int" Nullable="false" />
+    <Property Name="FLD_Limit" Type="int" Nullable="false" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_EnglishChannelTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_City_FK" Type="int" />
+    <Property Name="FLD_CityName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_Campaign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_Campaign">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_CompanyTitle" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Company_FK" Type="bigint" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Comment" Type="nvarchar(max)" />
+    <Property Name="FLD_IsActive" Type="bit" />
+    <Property Name="FLD_CompanyTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FLD_CompanyImage" Type="nvarchar" MaxLength="200" />
+    <Property Name="FLD_CompanyTel" Type="varchar" MaxLength="15" />
+    <Property Name="FLD_GroupName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_GroupComment" Type="nvarchar(max)" />
+    <Property Name="FLD_StartDate" Type="datetime" />
+    <Property Name="FLD_EndDate" Type="datetime" />
+    <Property Name="FLD_ACC_FK" Type="bigint" />
+    <Property Name="FLD_Lottary_FK" Type="bigint" />
+    <Property Name="FLD_Questionnaire_FK" Type="bigint" />
+    <Property Name="FLD_LottaryTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_ACCTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_QNo" Type="varchar" MaxLength="20" />
+    <Property Name="FLD_QTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Group_FK" Type="bigint" />
+    <Property Name="FLD_TimeRange" Type="tinyint" />
+    <Property Name="FLD_Description" Type="nvarchar(max)" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_EnglishComment" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_CampaignAccess' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_CampaignAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_QuestionnaireTitle" />
+      <PropertyRef Name="FLD_QuestionnaireEnglishTitle" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Campaign_FK" Type="bigint" />
+    <Property Name="FLD_User_FK" Type="bigint" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Comment" Type="nvarchar(max)" />
+    <Property Name="FLD_Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Gender" Type="bit" />
+    <Property Name="FLD_Lottary_FK" Type="bigint" />
+    <Property Name="FLD_ACC_FK" Type="bigint" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_CompanyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_CompanyEnglishName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_GroupName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_GroupEnglishName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_QuestionnaireTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FLD_QuestionnaireEnglishTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FLD_EnglishComment" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_Company' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_Company">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_Title" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Group_FK" Type="bigint" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FLD_Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="FLD_IsEnabled" Type="bit" />
+    <Property Name="FLD_Email" Type="varchar" MaxLength="100" />
+    <Property Name="FLD_Phone" Type="varchar" MaxLength="15" />
+    <Property Name="FLD_CreateDate" Type="datetime" />
+    <Property Name="FLD_GroupName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_GroupComment" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_ContractProgram' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_ContractProgram">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_ContractTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Commnet" Type="nvarchar(max)" />
+    <Property Name="FLD_ClassNo" Type="int" />
+    <Property Name="FLD_PPS" Type="float" />
+    <Property Name="FLD_Media" Type="tinyint" />
+    <Property Name="FLD_ChannelTitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="FLD_ProgramTitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Class_FK" Type="bigint" />
+    <Property Name="FLD_Channel_FK" Type="bigint" />
+    <Property Name="FLD_StartTime" Type="datetime" />
+    <Property Name="FLD_EndTime" Type="datetime" />
+    <Property Name="FLD_PlayTime" Type="varchar" MaxLength="5" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+    <Property Name="FLD_Before" Type="bit" />
+    <Property Name="FLD_Middle" Type="bit" />
+    <Property Name="FLD_After" Type="bit" />
+    <Property Name="FLD_Enable" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_Contracts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_Contracts">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Commnet" Type="nvarchar(max)" />
+    <Property Name="FLD_Class" Type="int" />
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_Lottary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_Lottary">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Category_FK" Type="bigint" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_CategoryTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_Redundant" Type="float" />
+    <Property Name="FLD_RedundantType" Type="tinyint" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_Profile' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_Profile">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_IsEnabled" Type="bit" />
+    <Property Name="FLD_Email" Type="varchar" MaxLength="100" />
+    <Property Name="FLD_Phone" Type="varchar" MaxLength="15" />
+    <Property Name="FLD_CreateDate" Type="datetime" />
+    <Property Name="FLD_Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Gender" Type="bit" />
+    <Property Name="FLD_Username" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Password" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Cell" Type="varchar" MaxLength="15" />
+    <Property Name="FLD_DisableDate" Type="datetime" />
+    <Property Name="FLD_CompanyTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Access" Type="tinyint" />
+    <Property Name="FLD_Company_FK" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_Program' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_Program">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Channel_FK" Type="bigint" />
+    <Property Name="FLD_StartTime" Type="datetime" />
+    <Property Name="FLD_EndTime" Type="datetime" />
+    <Property Name="FLD_Enable" Type="bit" />
+    <Property Name="FLD_PlayTime" Type="varchar" MaxLength="5" />
+    <Property Name="FLD_ChannelMedia" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_ChannelName" Type="nvarchar" MaxLength="200" />
+    <Property Name="FLD_ChannelBroadcast" Type="tinyint" />
+    <Property Name="FLD_Before" Type="bit" />
+    <Property Name="FLD_Middle" Type="bit" />
+    <Property Name="FLD_After" Type="bit" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+    <Property Name="FLD_EnglishTitle" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_ProgramAccess' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_ProgramAccess">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_Extra" Type="bigint" />
+    <Property Name="FLD_ExtraType" Type="tinyint" />
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+    <Property Name="FLD_Group_FK" Type="bigint" />
+    <Property Name="FLD_Class_FK" Type="bigint" />
+    <Property Name="FLD_Program" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Group" Type="nvarchar" MaxLength="100" />
+    <Property Name="FLD_ClassNo" Type="int" />
+    <Property Name="FLD_PPS" Type="float" />
+    <Property Name="FLD_Media_FK" Type="tinyint" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_Channel" Type="nvarchar" MaxLength="200" />
+    <Property Name="FLD_Series_FK" Type="bigint" />
+    <Property Name="FLD_Location_FK" Type="bigint" />
+    <Property Name="FLD_LocationTitle" Type="nvarchar" MaxLength="20" />
+    <Property Name="FLD_Month" Type="tinyint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_Question' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_Question">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Questionnaire_FK" Type="bigint" />
+    <Property Name="FLD_Program_FK" Type="bigint" />
+    <Property Name="FLD_Channel_FK" Type="bigint" />
+    <Property Name="FLD_ProgramTitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_StartTime" Type="datetime" />
+    <Property Name="FLD_EndTime" Type="datetime" />
+    <Property Name="FLD_Enable" Type="bit" />
+    <Property Name="FLD_PlayTime" Type="varchar" MaxLength="5" />
+    <Property Name="FLD_Before" Type="bit" />
+    <Property Name="FLD_Middle" Type="bit" />
+    <Property Name="FLD_After" Type="bit" />
+    <Property Name="FLD_ChannelName" Type="nvarchar" MaxLength="200" />
+    <Property Name="FLD_ChannelBroadcast" Type="tinyint" />
+    <Property Name="FLD_QNo" Type="varchar" MaxLength="20" />
+    <Property Name="FLD_IsPublish" Type="bit" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_Respondent' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_Respondent">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+    </Key>
+    <Property Name="FLD_QNo" Type="varchar" MaxLength="20" />
+    <Property Name="FLD_QTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Questionnaire_FK" Type="bigint" />
+    <Property Name="FLD_Responder_FK" Type="bigint" />
+    <Property Name="FLD_BestCompany" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_BestClass" Type="bigint" />
+    <Property Name="FLD_WorstAdvertising" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_WorstCompany" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_WatchTV" Type="tinyint" />
+    <Property Name="FLD_WorstClass" Type="bigint" />
+    <Property Name="FLD_Inquirer_FK" Type="bigint" />
+    <Property Name="FLD_BestAdvertising" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_ResponderName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_ResponderEducation" Type="tinyint" />
+    <Property Name="FLD_ResponderAges" Type="tinyint" />
+    <Property Name="FLD_ResponderOccupation" Type="tinyint" />
+    <Property Name="FLD_ResponderFamilyIncome" Type="tinyint" />
+    <Property Name="FLD_ResponderCooperation" Type="bit" />
+    <Property Name="FLD_ResponderGender" Type="bit" />
+    <Property Name="FLD_InquirerName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_IsPublish" Type="bit" />
+    <Property Name="FLD_ResponderMaritalStatus" Type="tinyint" />
+    <Property Name="FLD_CreateDate" Type="date" />
+    <Property Name="FLD_BestAdvertising2" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_BestCompany2" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_BestClass2" Type="bigint" />
+    <Property Name="FLD_WorstAdvertising2" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_WorstCompany2" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_WorstClass2" Type="bigint" />
+    <Property Name="FLD_ResponderCity" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_User">
+    <Key>
+      <PropertyRef Name="FLD_ID_PK" />
+      <PropertyRef Name="FLD_FirstVisit" />
+    </Key>
+    <Property Name="FLD_ID_PK" Type="bigint" Nullable="false" />
+    <Property Name="FLD_Company_FK" Type="bigint" />
+    <Property Name="FLD_Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Gender" Type="bit" />
+    <Property Name="FLD_Username" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Password" Type="nvarchar" MaxLength="150" />
+    <Property Name="FLD_Cell" Type="varchar" MaxLength="15" />
+    <Property Name="FLD_DisableDate" Type="datetime" />
+    <Property Name="FLD_Access" Type="tinyint" />
+    <Property Name="FLD_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="FLD_IsEnabled" Type="bit" />
+    <Property Name="FLD_Email" Type="varchar" MaxLength="100" />
+    <Property Name="FLD_Phone" Type="varchar" MaxLength="15" />
+    <Property Name="FLD_CreateDate" Type="datetime" />
+    <Property Name="FLD_LastVisit" Type="datetime" />
+    <Property Name="FLD_FirstVisit" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RightPoint.dbo.VIW_WeekReps' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIW_WeekReps">
+    <Key>
+      <PropertyRef Name="FLD_WeekRep" />
+      <PropertyRef Name="FLD_Limit" />
+    </Key>
+    <Property Name="FLD_Program_FK" Type="bigint" />
+    <Property Name="FLD_WeekRep" Type="int" Nullable="false" />
+    <Property Name="FLD_Limit" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TBL_ACC_TBL_Media">
+    <End Role="TBL_Media" Type="Self.TBL_Media" Multiplicity="0..1" />
+    <End Role="TBL_ACC" Type="Self.TBL_ACC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ACC">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ACC_TBL_Media1">
+    <End Role="TBL_Media" Type="Self.TBL_Media" Multiplicity="0..1" />
+    <End Role="TBL_ACC" Type="Self.TBL_ACC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ACC">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_AMD_TBL_Media">
+    <End Role="TBL_Media" Type="Self.TBL_Media" Multiplicity="0..1" />
+    <End Role="TBL_AMD" Type="Self.TBL_AMD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_AMD">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ANSW_REFERENCE_TBL_RESP">
+    <End Role="TBL_Respondent" Type="Self.TBL_Respondent" Multiplicity="0..1" />
+    <End Role="TBL_Answer" Type="Self.TBL_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Respondent">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Answer">
+        <PropertyRef Name="FLD_Respondent_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Answer_TBL_Program">
+    <End Role="TBL_Program" Type="Self.TBL_Program" Multiplicity="0..1" />
+    <End Role="TBL_Answer" Type="Self.TBL_Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Answer">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Campaign_TBL_ACC">
+    <End Role="TBL_ACC" Type="Self.TBL_ACC" Multiplicity="0..1" />
+    <End Role="TBL_Campaign" Type="Self.TBL_Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ACC">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Campaign">
+        <PropertyRef Name="FLD_ACC_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Campaign_TBL_Company">
+    <End Role="TBL_Company" Type="Self.TBL_Company" Multiplicity="0..1" />
+    <End Role="TBL_Campaign" Type="Self.TBL_Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Company">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Campaign">
+        <PropertyRef Name="FLD_Company_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Campaign_TBL_Lottary">
+    <End Role="TBL_Lottary" Type="Self.TBL_Lottary" Multiplicity="0..1" />
+    <End Role="TBL_Campaign" Type="Self.TBL_Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Lottary">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Campaign">
+        <PropertyRef Name="FLD_Lottary_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Campaign_TBL_Questionnaire">
+    <End Role="TBL_Questionnaire" Type="Self.TBL_Questionnaire" Multiplicity="0..1" />
+    <End Role="TBL_Campaign" Type="Self.TBL_Campaign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Questionnaire">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Campaign">
+        <PropertyRef Name="FLD_Questionnaire_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CampaignAccess_TBL_Campaign">
+    <End Role="TBL_Campaign" Type="Self.TBL_Campaign" Multiplicity="0..1" />
+    <End Role="TBL_CampaignAccess" Type="Self.TBL_CampaignAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Campaign">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_CampaignAccess">
+        <PropertyRef Name="FLD_Campaign_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CampaignAccess_TBL_User">
+    <End Role="TBL_User" Type="Self.TBL_User" Multiplicity="0..1" />
+    <End Role="TBL_CampaignAccess" Type="Self.TBL_CampaignAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_User">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_CampaignAccess">
+        <PropertyRef Name="FLD_User_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Channel_TBL_Media">
+    <End Role="TBL_Media" Type="Self.TBL_Media" Multiplicity="0..1" />
+    <End Role="TBL_Channel" Type="Self.TBL_Channel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Channel">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Channel_TBL_Province">
+    <End Role="TBL_Province" Type="Self.TBL_Province" Multiplicity="0..1" />
+    <End Role="TBL_Channel" Type="Self.TBL_Channel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Province">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Channel">
+        <PropertyRef Name="FLD_Province_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Class_TBL_Contract">
+    <End Role="TBL_Contract" Type="Self.TBL_Contract" Multiplicity="0..1" />
+    <End Role="TBL_Class" Type="Self.TBL_Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Contract">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Class">
+        <PropertyRef Name="FLD_Contract_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Class_TBL_Media">
+    <End Role="TBL_Media" Type="Self.TBL_Media" Multiplicity="0..1" />
+    <End Role="TBL_Class" Type="Self.TBL_Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Class">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Company_TBL_OwnerGroup">
+    <End Role="TBL_OwnerGroup" Type="Self.TBL_OwnerGroup" Multiplicity="0..1" />
+    <End Role="TBL_Company" Type="Self.TBL_Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_OwnerGroup">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Company">
+        <PropertyRef Name="FLD_Group_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Company_TBL_Profile">
+    <End Role="TBL_Profile" Type="Self.TBL_Profile" Multiplicity="1" />
+    <End Role="TBL_Company" Type="Self.TBL_Company" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Company">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CONT_REFERENCE_TBL_CLAS">
+    <End Role="TBL_Class" Type="Self.TBL_Class" Multiplicity="0..1" />
+    <End Role="TBL_ContractAccess" Type="Self.TBL_ContractAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Class">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ContractAccess">
+        <PropertyRef Name="FLD_ClassID_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_CONT_REFERENCE_TBL_CONT">
+    <End Role="TBL_Contract" Type="Self.TBL_Contract" Multiplicity="0..1" />
+    <End Role="TBL_ContractAccess" Type="Self.TBL_ContractAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Contract">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ContractAccess">
+        <PropertyRef Name="FLD_ContractID_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ContractMD_TBL_Contract">
+    <End Role="TBL_Contract" Type="Self.TBL_Contract" Multiplicity="0..1" />
+    <End Role="TBL_ContractMD" Type="Self.TBL_ContractMD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Contract">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ContractMD">
+        <PropertyRef Name="FLD_ContractID_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_LIMI_REFERENCE_TBL_PROG">
+    <End Role="TBL_Program" Type="Self.TBL_Program" Multiplicity="0..1" />
+    <End Role="TBL_Limit" Type="Self.TBL_Limit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Limit">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Location_TBL_Media">
+    <End Role="TBL_Media" Type="Self.TBL_Media" Multiplicity="0..1" />
+    <End Role="TBL_Location" Type="Self.TBL_Location" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Location">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_LOTT_REFERENCE_TBL_LCAT">
+    <End Role="TBL_LCategory" Type="Self.TBL_LCategory" Multiplicity="0..1" />
+    <End Role="TBL_Lottary" Type="Self.TBL_Lottary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_LCategory">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Lottary">
+        <PropertyRef Name="FLD_Category_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Lottary_TBL_Media">
+    <End Role="TBL_Media" Type="Self.TBL_Media" Multiplicity="0..1" />
+    <End Role="TBL_Lottary" Type="Self.TBL_Lottary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Lottary">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Position_TBL_Media">
+    <End Role="TBL_Media" Type="Self.TBL_Media" Multiplicity="0..1" />
+    <End Role="TBL_Position" Type="Self.TBL_Position" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Media">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Position">
+        <PropertyRef Name="FLD_Media_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_PROG_REFERENCE_TBL_CHAN">
+    <End Role="TBL_Channel" Type="Self.TBL_Channel" Multiplicity="0..1" />
+    <End Role="TBL_Program" Type="Self.TBL_Program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Channel">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Program">
+        <PropertyRef Name="FLD_Channel_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Program_TBL_Program">
+    <End Role="TBL_Program" Type="Self.TBL_Program" Multiplicity="1" />
+    <End Role="TBL_Program1" Type="Self.TBL_Program" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Program1">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_Class">
+    <End Role="TBL_Class" Type="Self.TBL_Class" Multiplicity="0..1" />
+    <End Role="TBL_ProgramAccess" Type="Self.TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Class">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Class_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_Location">
+    <End Role="TBL_Location" Type="Self.TBL_Location" Multiplicity="0..1" />
+    <End Role="TBL_ProgramAccess" Type="Self.TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Location">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Location_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_OwnerGroup">
+    <End Role="TBL_OwnerGroup" Type="Self.TBL_OwnerGroup" Multiplicity="0..1" />
+    <End Role="TBL_ProgramAccess" Type="Self.TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_OwnerGroup">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Group_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_Program">
+    <End Role="TBL_Program" Type="Self.TBL_Program" Multiplicity="0..1" />
+    <End Role="TBL_ProgramAccess" Type="Self.TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_ProgramAccess_TBL_ProgramSeries">
+    <End Role="TBL_ProgramSeries" Type="Self.TBL_ProgramSeries" Multiplicity="0..1" />
+    <End Role="TBL_ProgramAccess" Type="Self.TBL_ProgramAccess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_ProgramSeries">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_ProgramAccess">
+        <PropertyRef Name="FLD_Series_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_QUES_REFERENCE_TBL_QUES">
+    <End Role="TBL_Questionnaire" Type="Self.TBL_Questionnaire" Multiplicity="0..1" />
+    <End Role="TBL_Question" Type="Self.TBL_Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Questionnaire">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Question">
+        <PropertyRef Name="FLD_Questionnaire_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Question_TBL_Program">
+    <End Role="TBL_Program" Type="Self.TBL_Program" Multiplicity="0..1" />
+    <End Role="TBL_Question" Type="Self.TBL_Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Question">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Respondent_TBL_Questionnaire">
+    <End Role="TBL_Questionnaire" Type="Self.TBL_Questionnaire" Multiplicity="0..1" />
+    <End Role="TBL_Respondent" Type="Self.TBL_Respondent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Questionnaire">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Respondent">
+        <PropertyRef Name="FLD_Questionnaire_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Respondent_TBL_Responder">
+    <End Role="TBL_Responder" Type="Self.TBL_Responder" Multiplicity="0..1" />
+    <End Role="TBL_Respondent" Type="Self.TBL_Respondent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Responder">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Respondent">
+        <PropertyRef Name="FLD_Responder_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_Responder_TBL_City">
+    <End Role="TBL_City" Type="Self.TBL_City" Multiplicity="0..1" />
+    <End Role="TBL_Responder" Type="Self.TBL_Responder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_City">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_Responder">
+        <PropertyRef Name="FLD_City_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_User_TBL_Company">
+    <End Role="TBL_Company" Type="Self.TBL_Company" Multiplicity="0..1" />
+    <End Role="TBL_User" Type="Self.TBL_User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Company">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_User">
+        <PropertyRef Name="FLD_Company_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_User_TBL_Profile">
+    <End Role="TBL_Profile" Type="Self.TBL_Profile" Multiplicity="1" />
+    <End Role="TBL_User" Type="Self.TBL_User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Profile">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_User">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_WEEK_REFERENCE_TBL_PROG">
+    <End Role="TBL_Program" Type="Self.TBL_Program" Multiplicity="0..1" />
+    <End Role="TBL_WeekRep" Type="Self.TBL_WeekRep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Program">
+        <PropertyRef Name="FLD_ID_PK" />
+      </Principal>
+      <Dependent Role="TBL_WeekRep">
+        <PropertyRef Name="FLD_Program_FK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="PROC_CraeteAutorizeList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="RightPointModelStoreContainer">
+    <EntitySet Name="TBL_ACC" EntityType="Self.TBL_ACC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AMD" EntityType="Self.TBL_AMD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Answer" EntityType="Self.TBL_Answer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Campaign" EntityType="Self.TBL_Campaign" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CampaignAccess" EntityType="Self.TBL_CampaignAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Category" EntityType="Self.TBL_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Channel" EntityType="Self.TBL_Channel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_City" EntityType="Self.TBL_City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Class" EntityType="Self.TBL_Class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Company" EntityType="Self.TBL_Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ContextType" EntityType="Self.TBL_ContextType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Contract" EntityType="Self.TBL_Contract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ContractAccess" EntityType="Self.TBL_ContractAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ContractMD" EntityType="Self.TBL_ContractMD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Foretaste" EntityType="Self.TBL_Foretaste" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_LCategory" EntityType="Self.TBL_LCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Limit" EntityType="Self.TBL_Limit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Location" EntityType="Self.TBL_Location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Lottary" EntityType="Self.TBL_Lottary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Media" EntityType="Self.TBL_Media" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_OwnerGroup" EntityType="Self.TBL_OwnerGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Position" EntityType="Self.TBL_Position" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Profile" EntityType="Self.TBL_Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Program" EntityType="Self.TBL_Program" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ProgramAccess" EntityType="Self.TBL_ProgramAccess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ProgramSeries" EntityType="Self.TBL_ProgramSeries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Province" EntityType="Self.TBL_Province" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Question" EntityType="Self.TBL_Question" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Questionnaire" EntityType="Self.TBL_Questionnaire" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Respondent" EntityType="Self.TBL_Respondent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Responder" EntityType="Self.TBL_Responder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_User" EntityType="Self.TBL_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_WeekRep" EntityType="Self.TBL_WeekRep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VIW_Answer" EntityType="Self.VIW_Answer" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_Answer].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_Answer].[FLD_Respondent_FK] AS [FLD_Respondent_FK], 
+    [VIW_Answer].[FLD_Program_FK] AS [FLD_Program_FK], 
+    [VIW_Answer].[FLD_Option] AS [FLD_Option], 
+    [VIW_Answer].[FLD_QNo] AS [FLD_QNo], 
+    [VIW_Answer].[FLD_Title] AS [FLD_Title], 
+    [VIW_Answer].[FLD_IsPublish] AS [FLD_IsPublish], 
+    [VIW_Answer].[FLD_ResponderName] AS [FLD_ResponderName], 
+    [VIW_Answer].[FLD_ResponderEducation] AS [FLD_ResponderEducation], 
+    [VIW_Answer].[FLD_ResponderAges] AS [FLD_ResponderAges], 
+    [VIW_Answer].[FLD_ResponderOccupation] AS [FLD_ResponderOccupation], 
+    [VIW_Answer].[FLD_ResponderFamilyIncome] AS [FLD_ResponderFamilyIncome], 
+    [VIW_Answer].[FLD_ResponderCooperation] AS [FLD_ResponderCooperation], 
+    [VIW_Answer].[FLD_ResponderGender] AS [FLD_ResponderGender], 
+    [VIW_Answer].[FLD_InquirerName] AS [FLD_InquirerName], 
+    [VIW_Answer].[FLD_InquirerTitle] AS [FLD_InquirerTitle], 
+    [VIW_Answer].[FLD_InquirerGender] AS [FLD_InquirerGender], 
+    [VIW_Answer].[FLD_InquirerCompanyTitle] AS [FLD_InquirerCompanyTitle], 
+    [VIW_Answer].[FLD_ProgramTitle] AS [FLD_ProgramTitle], 
+    [VIW_Answer].[FLD_Before] AS [FLD_Before], 
+    [VIW_Answer].[FLD_Middle] AS [FLD_Middle], 
+    [VIW_Answer].[FLD_After] AS [FLD_After], 
+    [VIW_Answer].[FLD_Questionnaire_FK] AS [FLD_Questionnaire_FK]
+    FROM [dbo].[VIW_Answer] AS [VIW_Answer]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_AutorizeList" EntityType="Self.VIW_AutorizeList" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_AutorizeList].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_AutorizeList].[FLD_Respondent_FK] AS [FLD_Respondent_FK], 
+    [VIW_AutorizeList].[FLD_Option] AS [FLD_Option], 
+    [VIW_AutorizeList].[FLD_Program_FK] AS [FLD_Program_FK], 
+    [VIW_AutorizeList].[FLD_Responder_FK] AS [FLD_Responder_FK], 
+    [VIW_AutorizeList].[FLD_ProgramTitle] AS [FLD_ProgramTitle], 
+    [VIW_AutorizeList].[FLD_Before] AS [FLD_Before], 
+    [VIW_AutorizeList].[FLD_Middle] AS [FLD_Middle], 
+    [VIW_AutorizeList].[FLD_After] AS [FLD_After], 
+    [VIW_AutorizeList].[FLD_Group_FK] AS [FLD_Group_FK], 
+    [VIW_AutorizeList].[FLD_Class_FK] AS [FLD_Class_FK], 
+    [VIW_AutorizeList].[FLD_Series_FK] AS [FLD_Series_FK], 
+    [VIW_AutorizeList].[FLD_Location_FK] AS [FLD_Location_FK], 
+    [VIW_AutorizeList].[FLD_Month] AS [FLD_Month], 
+    [VIW_AutorizeList].[FLD_Extra] AS [FLD_Extra], 
+    [VIW_AutorizeList].[FLD_ExtraType] AS [FLD_ExtraType], 
+    [VIW_AutorizeList].[FLD_PPS] AS [FLD_PPS], 
+    [VIW_AutorizeList].[FLD_ClassNo] AS [FLD_ClassNo], 
+    [VIW_AutorizeList].[FLD_Media_FK] AS [FLD_Media_FK], 
+    [VIW_AutorizeList].[FLD_MediaTitle] AS [FLD_MediaTitle], 
+    [VIW_AutorizeList].[FLD_LocationTitle] AS [FLD_LocationTitle], 
+    [VIW_AutorizeList].[FLD_Loc] AS [FLD_Loc], 
+    [VIW_AutorizeList].[FLD_LocationRedundant] AS [FLD_LocationRedundant], 
+    [VIW_AutorizeList].[FLD_LocationType] AS [FLD_LocationType], 
+    [VIW_AutorizeList].[FLD_SeriesTitle] AS [FLD_SeriesTitle], 
+    [VIW_AutorizeList].[FLD_SeriesRedundant] AS [FLD_SeriesRedundant], 
+    [VIW_AutorizeList].[FLD_SeriesType] AS [FLD_SeriesType], 
+    [VIW_AutorizeList].[FLD_ContactTitle] AS [FLD_ContactTitle], 
+    [VIW_AutorizeList].[FLD_Channel_FK] AS [FLD_Channel_FK], 
+    [VIW_AutorizeList].[FLD_StartTime] AS [FLD_StartTime], 
+    [VIW_AutorizeList].[FLD_EndTime] AS [FLD_EndTime], 
+    [VIW_AutorizeList].[FLD_Enable] AS [FLD_Enable], 
+    [VIW_AutorizeList].[FLD_PlayTime] AS [FLD_PlayTime], 
+    [VIW_AutorizeList].[FLD_QNo] AS [FLD_QNo], 
+    [VIW_AutorizeList].[FLD_QuestionnaireIsPublish] AS [FLD_QuestionnaireIsPublish], 
+    [VIW_AutorizeList].[FLD_CreatDate] AS [FLD_CreatDate], 
+    [VIW_AutorizeList].[FLD_RespondentIsPublish] AS [FLD_RespondentIsPublish], 
+    [VIW_AutorizeList].[FLD_Name] AS [FLD_Name], 
+    [VIW_AutorizeList].[FLD_Education] AS [FLD_Education], 
+    [VIW_AutorizeList].[FLD_Ages] AS [FLD_Ages], 
+    [VIW_AutorizeList].[FLD_Occupation] AS [FLD_Occupation], 
+    [VIW_AutorizeList].[FLD_FamilyIncome] AS [FLD_FamilyIncome], 
+    [VIW_AutorizeList].[FLD_MaritalStatus] AS [FLD_MaritalStatus], 
+    [VIW_AutorizeList].[FLD_Cooperation] AS [FLD_Cooperation], 
+    [VIW_AutorizeList].[FLD_Gender] AS [FLD_Gender], 
+    [VIW_AutorizeList].[FLD_ChannelTitle] AS [FLD_ChannelTitle], 
+    [VIW_AutorizeList].[FLD_Province_FK] AS [FLD_Province_FK], 
+    [VIW_AutorizeList].[FLD_Broadcast] AS [FLD_Broadcast], 
+    [VIW_AutorizeList].[FLD_ProvinceTitle] AS [FLD_ProvinceTitle], 
+    [VIW_AutorizeList].[FLD_ProvinceType] AS [FLD_ProvinceType], 
+    [VIW_AutorizeList].[FLD_ProvinceRedundant] AS [FLD_ProvinceRedundant], 
+    [VIW_AutorizeList].[FLD_Questionnaire_FK] AS [FLD_Questionnaire_FK], 
+    [VIW_AutorizeList].[FLD_WeekRep] AS [FLD_WeekRep], 
+    [VIW_AutorizeList].[FLD_Limit] AS [FLD_Limit], 
+    [VIW_AutorizeList].[FLD_EnglishTitle] AS [FLD_EnglishTitle], 
+    [VIW_AutorizeList].[FLD_EnglishChannelTitle] AS [FLD_EnglishChannelTitle], 
+    [VIW_AutorizeList].[FLD_City_FK] AS [FLD_City_FK], 
+    [VIW_AutorizeList].[FLD_CityName] AS [FLD_CityName]
+    FROM [dbo].[VIW_AutorizeList] AS [VIW_AutorizeList]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_Campaign" EntityType="Self.VIW_Campaign" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_Campaign].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_Campaign].[FLD_Company_FK] AS [FLD_Company_FK], 
+    [VIW_Campaign].[FLD_Title] AS [FLD_Title], 
+    [VIW_Campaign].[FLD_Comment] AS [FLD_Comment], 
+    [VIW_Campaign].[FLD_IsActive] AS [FLD_IsActive], 
+    [VIW_Campaign].[FLD_CompanyTitle] AS [FLD_CompanyTitle], 
+    [VIW_Campaign].[FLD_CompanyImage] AS [FLD_CompanyImage], 
+    [VIW_Campaign].[FLD_CompanyTel] AS [FLD_CompanyTel], 
+    [VIW_Campaign].[FLD_GroupName] AS [FLD_GroupName], 
+    [VIW_Campaign].[FLD_GroupComment] AS [FLD_GroupComment], 
+    [VIW_Campaign].[FLD_StartDate] AS [FLD_StartDate], 
+    [VIW_Campaign].[FLD_EndDate] AS [FLD_EndDate], 
+    [VIW_Campaign].[FLD_ACC_FK] AS [FLD_ACC_FK], 
+    [VIW_Campaign].[FLD_Lottary_FK] AS [FLD_Lottary_FK], 
+    [VIW_Campaign].[FLD_Questionnaire_FK] AS [FLD_Questionnaire_FK], 
+    [VIW_Campaign].[FLD_LottaryTitle] AS [FLD_LottaryTitle], 
+    [VIW_Campaign].[FLD_ACCTitle] AS [FLD_ACCTitle], 
+    [VIW_Campaign].[FLD_QNo] AS [FLD_QNo], 
+    [VIW_Campaign].[FLD_QTitle] AS [FLD_QTitle], 
+    [VIW_Campaign].[FLD_Group_FK] AS [FLD_Group_FK], 
+    [VIW_Campaign].[FLD_TimeRange] AS [FLD_TimeRange], 
+    [VIW_Campaign].[FLD_Description] AS [FLD_Description], 
+    [VIW_Campaign].[FLD_EnglishTitle] AS [FLD_EnglishTitle], 
+    [VIW_Campaign].[FLD_EnglishComment] AS [FLD_EnglishComment]
+    FROM [dbo].[VIW_Campaign] AS [VIW_Campaign]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_CampaignAccess" EntityType="Self.VIW_CampaignAccess" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_CampaignAccess].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_CampaignAccess].[FLD_Campaign_FK] AS [FLD_Campaign_FK], 
+    [VIW_CampaignAccess].[FLD_User_FK] AS [FLD_User_FK], 
+    [VIW_CampaignAccess].[FLD_Title] AS [FLD_Title], 
+    [VIW_CampaignAccess].[FLD_Comment] AS [FLD_Comment], 
+    [VIW_CampaignAccess].[FLD_Name] AS [FLD_Name], 
+    [VIW_CampaignAccess].[FLD_Gender] AS [FLD_Gender], 
+    [VIW_CampaignAccess].[FLD_Lottary_FK] AS [FLD_Lottary_FK], 
+    [VIW_CampaignAccess].[FLD_ACC_FK] AS [FLD_ACC_FK], 
+    [VIW_CampaignAccess].[FLD_EnglishTitle] AS [FLD_EnglishTitle], 
+    [VIW_CampaignAccess].[FLD_CompanyName] AS [FLD_CompanyName], 
+    [VIW_CampaignAccess].[FLD_CompanyEnglishName] AS [FLD_CompanyEnglishName], 
+    [VIW_CampaignAccess].[FLD_GroupName] AS [FLD_GroupName], 
+    [VIW_CampaignAccess].[FLD_GroupEnglishName] AS [FLD_GroupEnglishName], 
+    [VIW_CampaignAccess].[FLD_QuestionnaireTitle] AS [FLD_QuestionnaireTitle], 
+    [VIW_CampaignAccess].[FLD_QuestionnaireEnglishTitle] AS [FLD_QuestionnaireEnglishTitle], 
+    [VIW_CampaignAccess].[FLD_EnglishComment] AS [FLD_EnglishComment]
+    FROM [dbo].[VIW_CampaignAccess] AS [VIW_CampaignAccess]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_Company" EntityType="Self.VIW_Company" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_Company].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_Company].[FLD_Group_FK] AS [FLD_Group_FK], 
+    [VIW_Company].[FLD_Title] AS [FLD_Title], 
+    [VIW_Company].[FLD_Image] AS [FLD_Image], 
+    [VIW_Company].[FLD_IsEnabled] AS [FLD_IsEnabled], 
+    [VIW_Company].[FLD_Email] AS [FLD_Email], 
+    [VIW_Company].[FLD_Phone] AS [FLD_Phone], 
+    [VIW_Company].[FLD_CreateDate] AS [FLD_CreateDate], 
+    [VIW_Company].[FLD_GroupName] AS [FLD_GroupName], 
+    [VIW_Company].[FLD_GroupComment] AS [FLD_GroupComment]
+    FROM [dbo].[VIW_Company] AS [VIW_Company]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_ContractProgram" EntityType="Self.VIW_ContractProgram" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_ContractProgram].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_ContractProgram].[FLD_ContractTitle] AS [FLD_ContractTitle], 
+    [VIW_ContractProgram].[FLD_Commnet] AS [FLD_Commnet], 
+    [VIW_ContractProgram].[FLD_ClassNo] AS [FLD_ClassNo], 
+    [VIW_ContractProgram].[FLD_PPS] AS [FLD_PPS], 
+    [VIW_ContractProgram].[FLD_Media] AS [FLD_Media], 
+    [VIW_ContractProgram].[FLD_ChannelTitle] AS [FLD_ChannelTitle], 
+    [VIW_ContractProgram].[FLD_ProgramTitle] AS [FLD_ProgramTitle], 
+    [VIW_ContractProgram].[FLD_Class_FK] AS [FLD_Class_FK], 
+    [VIW_ContractProgram].[FLD_Channel_FK] AS [FLD_Channel_FK], 
+    [VIW_ContractProgram].[FLD_StartTime] AS [FLD_StartTime], 
+    [VIW_ContractProgram].[FLD_EndTime] AS [FLD_EndTime], 
+    [VIW_ContractProgram].[FLD_PlayTime] AS [FLD_PlayTime], 
+    [VIW_ContractProgram].[FLD_Program_FK] AS [FLD_Program_FK], 
+    [VIW_ContractProgram].[FLD_Before] AS [FLD_Before], 
+    [VIW_ContractProgram].[FLD_Middle] AS [FLD_Middle], 
+    [VIW_ContractProgram].[FLD_After] AS [FLD_After], 
+    [VIW_ContractProgram].[FLD_Enable] AS [FLD_Enable]
+    FROM [dbo].[VIW_ContractProgram] AS [VIW_ContractProgram]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_Contracts" EntityType="Self.VIW_Contracts" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_Contracts].[FLD_Title] AS [FLD_Title], 
+    [VIW_Contracts].[FLD_Commnet] AS [FLD_Commnet], 
+    [VIW_Contracts].[FLD_Class] AS [FLD_Class], 
+    [VIW_Contracts].[FLD_ID_PK] AS [FLD_ID_PK]
+    FROM [dbo].[VIW_Contracts] AS [VIW_Contracts]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_Lottary" EntityType="Self.VIW_Lottary" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_Lottary].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_Lottary].[FLD_Category_FK] AS [FLD_Category_FK], 
+    [VIW_Lottary].[FLD_Title] AS [FLD_Title], 
+    [VIW_Lottary].[FLD_CategoryTitle] AS [FLD_CategoryTitle], 
+    [VIW_Lottary].[FLD_Redundant] AS [FLD_Redundant], 
+    [VIW_Lottary].[FLD_RedundantType] AS [FLD_RedundantType], 
+    [VIW_Lottary].[FLD_Media_FK] AS [FLD_Media_FK], 
+    [VIW_Lottary].[FLD_EnglishTitle] AS [FLD_EnglishTitle]
+    FROM [dbo].[VIW_Lottary] AS [VIW_Lottary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_Profile" EntityType="Self.VIW_Profile" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_Profile].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_Profile].[FLD_IsEnabled] AS [FLD_IsEnabled], 
+    [VIW_Profile].[FLD_Email] AS [FLD_Email], 
+    [VIW_Profile].[FLD_Phone] AS [FLD_Phone], 
+    [VIW_Profile].[FLD_CreateDate] AS [FLD_CreateDate], 
+    [VIW_Profile].[FLD_Name] AS [FLD_Name], 
+    [VIW_Profile].[FLD_Title] AS [FLD_Title], 
+    [VIW_Profile].[FLD_Gender] AS [FLD_Gender], 
+    [VIW_Profile].[FLD_Username] AS [FLD_Username], 
+    [VIW_Profile].[FLD_Password] AS [FLD_Password], 
+    [VIW_Profile].[FLD_Cell] AS [FLD_Cell], 
+    [VIW_Profile].[FLD_DisableDate] AS [FLD_DisableDate], 
+    [VIW_Profile].[FLD_CompanyTitle] AS [FLD_CompanyTitle], 
+    [VIW_Profile].[FLD_Access] AS [FLD_Access], 
+    [VIW_Profile].[FLD_Company_FK] AS [FLD_Company_FK]
+    FROM [dbo].[VIW_Profile] AS [VIW_Profile]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_Program" EntityType="Self.VIW_Program" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_Program].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_Program].[FLD_Title] AS [FLD_Title], 
+    [VIW_Program].[FLD_Channel_FK] AS [FLD_Channel_FK], 
+    [VIW_Program].[FLD_StartTime] AS [FLD_StartTime], 
+    [VIW_Program].[FLD_EndTime] AS [FLD_EndTime], 
+    [VIW_Program].[FLD_Enable] AS [FLD_Enable], 
+    [VIW_Program].[FLD_PlayTime] AS [FLD_PlayTime], 
+    [VIW_Program].[FLD_ChannelMedia] AS [FLD_ChannelMedia], 
+    [VIW_Program].[FLD_ChannelName] AS [FLD_ChannelName], 
+    [VIW_Program].[FLD_ChannelBroadcast] AS [FLD_ChannelBroadcast], 
+    [VIW_Program].[FLD_Before] AS [FLD_Before], 
+    [VIW_Program].[FLD_Middle] AS [FLD_Middle], 
+    [VIW_Program].[FLD_After] AS [FLD_After], 
+    [VIW_Program].[FLD_Media_FK] AS [FLD_Media_FK], 
+    [VIW_Program].[FLD_EnglishTitle] AS [FLD_EnglishTitle]
+    FROM [dbo].[VIW_Program] AS [VIW_Program]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_ProgramAccess" EntityType="Self.VIW_ProgramAccess" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_ProgramAccess].[FLD_Extra] AS [FLD_Extra], 
+    [VIW_ProgramAccess].[FLD_ExtraType] AS [FLD_ExtraType], 
+    [VIW_ProgramAccess].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_ProgramAccess].[FLD_Program_FK] AS [FLD_Program_FK], 
+    [VIW_ProgramAccess].[FLD_Group_FK] AS [FLD_Group_FK], 
+    [VIW_ProgramAccess].[FLD_Class_FK] AS [FLD_Class_FK], 
+    [VIW_ProgramAccess].[FLD_Program] AS [FLD_Program], 
+    [VIW_ProgramAccess].[FLD_Group] AS [FLD_Group], 
+    [VIW_ProgramAccess].[FLD_ClassNo] AS [FLD_ClassNo], 
+    [VIW_ProgramAccess].[FLD_PPS] AS [FLD_PPS], 
+    [VIW_ProgramAccess].[FLD_Media_FK] AS [FLD_Media_FK], 
+    [VIW_ProgramAccess].[FLD_Title] AS [FLD_Title], 
+    [VIW_ProgramAccess].[FLD_Channel] AS [FLD_Channel], 
+    [VIW_ProgramAccess].[FLD_Series_FK] AS [FLD_Series_FK], 
+    [VIW_ProgramAccess].[FLD_Location_FK] AS [FLD_Location_FK], 
+    [VIW_ProgramAccess].[FLD_LocationTitle] AS [FLD_LocationTitle], 
+    [VIW_ProgramAccess].[FLD_Month] AS [FLD_Month]
+    FROM [dbo].[VIW_ProgramAccess] AS [VIW_ProgramAccess]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_Question" EntityType="Self.VIW_Question" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_Question].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_Question].[FLD_Questionnaire_FK] AS [FLD_Questionnaire_FK], 
+    [VIW_Question].[FLD_Program_FK] AS [FLD_Program_FK], 
+    [VIW_Question].[FLD_Channel_FK] AS [FLD_Channel_FK], 
+    [VIW_Question].[FLD_ProgramTitle] AS [FLD_ProgramTitle], 
+    [VIW_Question].[FLD_StartTime] AS [FLD_StartTime], 
+    [VIW_Question].[FLD_EndTime] AS [FLD_EndTime], 
+    [VIW_Question].[FLD_Enable] AS [FLD_Enable], 
+    [VIW_Question].[FLD_PlayTime] AS [FLD_PlayTime], 
+    [VIW_Question].[FLD_Before] AS [FLD_Before], 
+    [VIW_Question].[FLD_Middle] AS [FLD_Middle], 
+    [VIW_Question].[FLD_After] AS [FLD_After], 
+    [VIW_Question].[FLD_ChannelName] AS [FLD_ChannelName], 
+    [VIW_Question].[FLD_ChannelBroadcast] AS [FLD_ChannelBroadcast], 
+    [VIW_Question].[FLD_QNo] AS [FLD_QNo], 
+    [VIW_Question].[FLD_IsPublish] AS [FLD_IsPublish], 
+    [VIW_Question].[FLD_Title] AS [FLD_Title]
+    FROM [dbo].[VIW_Question] AS [VIW_Question]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_Respondent" EntityType="Self.VIW_Respondent" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_Respondent].[FLD_QNo] AS [FLD_QNo], 
+    [VIW_Respondent].[FLD_QTitle] AS [FLD_QTitle], 
+    [VIW_Respondent].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_Respondent].[FLD_Questionnaire_FK] AS [FLD_Questionnaire_FK], 
+    [VIW_Respondent].[FLD_Responder_FK] AS [FLD_Responder_FK], 
+    [VIW_Respondent].[FLD_BestCompany] AS [FLD_BestCompany], 
+    [VIW_Respondent].[FLD_BestClass] AS [FLD_BestClass], 
+    [VIW_Respondent].[FLD_WorstAdvertising] AS [FLD_WorstAdvertising], 
+    [VIW_Respondent].[FLD_WorstCompany] AS [FLD_WorstCompany], 
+    [VIW_Respondent].[FLD_WatchTV] AS [FLD_WatchTV], 
+    [VIW_Respondent].[FLD_WorstClass] AS [FLD_WorstClass], 
+    [VIW_Respondent].[FLD_Inquirer_FK] AS [FLD_Inquirer_FK], 
+    [VIW_Respondent].[FLD_BestAdvertising] AS [FLD_BestAdvertising], 
+    [VIW_Respondent].[FLD_ResponderName] AS [FLD_ResponderName], 
+    [VIW_Respondent].[FLD_ResponderEducation] AS [FLD_ResponderEducation], 
+    [VIW_Respondent].[FLD_ResponderAges] AS [FLD_ResponderAges], 
+    [VIW_Respondent].[FLD_ResponderOccupation] AS [FLD_ResponderOccupation], 
+    [VIW_Respondent].[FLD_ResponderFamilyIncome] AS [FLD_ResponderFamilyIncome], 
+    [VIW_Respondent].[FLD_ResponderCooperation] AS [FLD_ResponderCooperation], 
+    [VIW_Respondent].[FLD_ResponderGender] AS [FLD_ResponderGender], 
+    [VIW_Respondent].[FLD_InquirerName] AS [FLD_InquirerName], 
+    [VIW_Respondent].[FLD_IsPublish] AS [FLD_IsPublish], 
+    [VIW_Respondent].[FLD_ResponderMaritalStatus] AS [FLD_ResponderMaritalStatus], 
+    [VIW_Respondent].[FLD_CreateDate] AS [FLD_CreateDate], 
+    [VIW_Respondent].[FLD_BestAdvertising2] AS [FLD_BestAdvertising2], 
+    [VIW_Respondent].[FLD_BestCompany2] AS [FLD_BestCompany2], 
+    [VIW_Respondent].[FLD_BestClass2] AS [FLD_BestClass2], 
+    [VIW_Respondent].[FLD_WorstAdvertising2] AS [FLD_WorstAdvertising2], 
+    [VIW_Respondent].[FLD_WorstCompany2] AS [FLD_WorstCompany2], 
+    [VIW_Respondent].[FLD_WorstClass2] AS [FLD_WorstClass2], 
+    [VIW_Respondent].[FLD_ResponderCity] AS [FLD_ResponderCity]
+    FROM [dbo].[VIW_Respondent] AS [VIW_Respondent]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_User" EntityType="Self.VIW_User" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_User].[FLD_ID_PK] AS [FLD_ID_PK], 
+    [VIW_User].[FLD_Company_FK] AS [FLD_Company_FK], 
+    [VIW_User].[FLD_Name] AS [FLD_Name], 
+    [VIW_User].[FLD_Gender] AS [FLD_Gender], 
+    [VIW_User].[FLD_Username] AS [FLD_Username], 
+    [VIW_User].[FLD_Password] AS [FLD_Password], 
+    [VIW_User].[FLD_Cell] AS [FLD_Cell], 
+    [VIW_User].[FLD_DisableDate] AS [FLD_DisableDate], 
+    [VIW_User].[FLD_Access] AS [FLD_Access], 
+    [VIW_User].[FLD_Title] AS [FLD_Title], 
+    [VIW_User].[FLD_IsEnabled] AS [FLD_IsEnabled], 
+    [VIW_User].[FLD_Email] AS [FLD_Email], 
+    [VIW_User].[FLD_Phone] AS [FLD_Phone], 
+    [VIW_User].[FLD_CreateDate] AS [FLD_CreateDate], 
+    [VIW_User].[FLD_LastVisit] AS [FLD_LastVisit], 
+    [VIW_User].[FLD_FirstVisit] AS [FLD_FirstVisit]
+    FROM [dbo].[VIW_User] AS [VIW_User]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIW_WeekReps" EntityType="Self.VIW_WeekReps" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VIW_WeekReps].[FLD_Program_FK] AS [FLD_Program_FK], 
+    [VIW_WeekReps].[FLD_WeekRep] AS [FLD_WeekRep], 
+    [VIW_WeekReps].[FLD_Limit] AS [FLD_Limit]
+    FROM [dbo].[VIW_WeekReps] AS [VIW_WeekReps]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_TBL_ACC_TBL_Media" Association="Self.FK_TBL_ACC_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_ACC" EntitySet="TBL_ACC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ACC_TBL_Media1" Association="Self.FK_TBL_ACC_TBL_Media1">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_ACC" EntitySet="TBL_ACC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_AMD_TBL_Media" Association="Self.FK_TBL_AMD_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_AMD" EntitySet="TBL_AMD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ANSW_REFERENCE_TBL_RESP" Association="Self.FK_TBL_ANSW_REFERENCE_TBL_RESP">
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+      <End Role="TBL_Answer" EntitySet="TBL_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Answer_TBL_Program" Association="Self.FK_TBL_Answer_TBL_Program">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_Answer" EntitySet="TBL_Answer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Campaign_TBL_ACC" Association="Self.FK_TBL_Campaign_TBL_ACC">
+      <End Role="TBL_ACC" EntitySet="TBL_ACC" />
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Campaign_TBL_Company" Association="Self.FK_TBL_Campaign_TBL_Company">
+      <End Role="TBL_Company" EntitySet="TBL_Company" />
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Campaign_TBL_Lottary" Association="Self.FK_TBL_Campaign_TBL_Lottary">
+      <End Role="TBL_Lottary" EntitySet="TBL_Lottary" />
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Campaign_TBL_Questionnaire" Association="Self.FK_TBL_Campaign_TBL_Questionnaire">
+      <End Role="TBL_Questionnaire" EntitySet="TBL_Questionnaire" />
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CampaignAccess_TBL_Campaign" Association="Self.FK_TBL_CampaignAccess_TBL_Campaign">
+      <End Role="TBL_Campaign" EntitySet="TBL_Campaign" />
+      <End Role="TBL_CampaignAccess" EntitySet="TBL_CampaignAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CampaignAccess_TBL_User" Association="Self.FK_TBL_CampaignAccess_TBL_User">
+      <End Role="TBL_User" EntitySet="TBL_User" />
+      <End Role="TBL_CampaignAccess" EntitySet="TBL_CampaignAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Channel_TBL_Media" Association="Self.FK_TBL_Channel_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Channel" EntitySet="TBL_Channel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Channel_TBL_Province" Association="Self.FK_TBL_Channel_TBL_Province">
+      <End Role="TBL_Province" EntitySet="TBL_Province" />
+      <End Role="TBL_Channel" EntitySet="TBL_Channel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Class_TBL_Contract" Association="Self.FK_TBL_Class_TBL_Contract">
+      <End Role="TBL_Contract" EntitySet="TBL_Contract" />
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Class_TBL_Media" Association="Self.FK_TBL_Class_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Company_TBL_OwnerGroup" Association="Self.FK_TBL_Company_TBL_OwnerGroup">
+      <End Role="TBL_OwnerGroup" EntitySet="TBL_OwnerGroup" />
+      <End Role="TBL_Company" EntitySet="TBL_Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Company_TBL_Profile" Association="Self.FK_TBL_Company_TBL_Profile">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_Company" EntitySet="TBL_Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CONT_REFERENCE_TBL_CLAS" Association="Self.FK_TBL_CONT_REFERENCE_TBL_CLAS">
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+      <End Role="TBL_ContractAccess" EntitySet="TBL_ContractAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_CONT_REFERENCE_TBL_CONT" Association="Self.FK_TBL_CONT_REFERENCE_TBL_CONT">
+      <End Role="TBL_Contract" EntitySet="TBL_Contract" />
+      <End Role="TBL_ContractAccess" EntitySet="TBL_ContractAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ContractMD_TBL_Contract" Association="Self.FK_TBL_ContractMD_TBL_Contract">
+      <End Role="TBL_Contract" EntitySet="TBL_Contract" />
+      <End Role="TBL_ContractMD" EntitySet="TBL_ContractMD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_LIMI_REFERENCE_TBL_PROG" Association="Self.FK_TBL_LIMI_REFERENCE_TBL_PROG">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_Limit" EntitySet="TBL_Limit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Location_TBL_Media" Association="Self.FK_TBL_Location_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Location" EntitySet="TBL_Location" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_LOTT_REFERENCE_TBL_LCAT" Association="Self.FK_TBL_LOTT_REFERENCE_TBL_LCAT">
+      <End Role="TBL_LCategory" EntitySet="TBL_LCategory" />
+      <End Role="TBL_Lottary" EntitySet="TBL_Lottary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Lottary_TBL_Media" Association="Self.FK_TBL_Lottary_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Lottary" EntitySet="TBL_Lottary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Position_TBL_Media" Association="Self.FK_TBL_Position_TBL_Media">
+      <End Role="TBL_Media" EntitySet="TBL_Media" />
+      <End Role="TBL_Position" EntitySet="TBL_Position" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_PROG_REFERENCE_TBL_CHAN" Association="Self.FK_TBL_PROG_REFERENCE_TBL_CHAN">
+      <End Role="TBL_Channel" EntitySet="TBL_Channel" />
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Program_TBL_Program" Association="Self.FK_TBL_Program_TBL_Program">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_Program1" EntitySet="TBL_Program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_Class" Association="Self.FK_TBL_ProgramAccess_TBL_Class">
+      <End Role="TBL_Class" EntitySet="TBL_Class" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_Location" Association="Self.FK_TBL_ProgramAccess_TBL_Location">
+      <End Role="TBL_Location" EntitySet="TBL_Location" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_OwnerGroup" Association="Self.FK_TBL_ProgramAccess_TBL_OwnerGroup">
+      <End Role="TBL_OwnerGroup" EntitySet="TBL_OwnerGroup" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_Program" Association="Self.FK_TBL_ProgramAccess_TBL_Program">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_ProgramAccess_TBL_ProgramSeries" Association="Self.FK_TBL_ProgramAccess_TBL_ProgramSeries">
+      <End Role="TBL_ProgramSeries" EntitySet="TBL_ProgramSeries" />
+      <End Role="TBL_ProgramAccess" EntitySet="TBL_ProgramAccess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_QUES_REFERENCE_TBL_QUES" Association="Self.FK_TBL_QUES_REFERENCE_TBL_QUES">
+      <End Role="TBL_Questionnaire" EntitySet="TBL_Questionnaire" />
+      <End Role="TBL_Question" EntitySet="TBL_Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Question_TBL_Program" Association="Self.FK_TBL_Question_TBL_Program">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_Question" EntitySet="TBL_Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Respondent_TBL_Questionnaire" Association="Self.FK_TBL_Respondent_TBL_Questionnaire">
+      <End Role="TBL_Questionnaire" EntitySet="TBL_Questionnaire" />
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Respondent_TBL_Responder" Association="Self.FK_TBL_Respondent_TBL_Responder">
+      <End Role="TBL_Responder" EntitySet="TBL_Responder" />
+      <End Role="TBL_Respondent" EntitySet="TBL_Respondent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_Responder_TBL_City" Association="Self.FK_TBL_Responder_TBL_City">
+      <End Role="TBL_City" EntitySet="TBL_City" />
+      <End Role="TBL_Responder" EntitySet="TBL_Responder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_User_TBL_Company" Association="Self.FK_TBL_User_TBL_Company">
+      <End Role="TBL_Company" EntitySet="TBL_Company" />
+      <End Role="TBL_User" EntitySet="TBL_User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_User_TBL_Profile" Association="Self.FK_TBL_User_TBL_Profile">
+      <End Role="TBL_Profile" EntitySet="TBL_Profile" />
+      <End Role="TBL_User" EntitySet="TBL_User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_WEEK_REFERENCE_TBL_PROG" Association="Self.FK_TBL_WEEK_REFERENCE_TBL_PROG">
+      <End Role="TBL_Program" EntitySet="TBL_Program" />
+      <End Role="TBL_WeekRep" EntitySet="TBL_WeekRep" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
